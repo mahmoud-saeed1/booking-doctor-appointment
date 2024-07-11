@@ -6,8 +6,8 @@ import "./index.css";
 const NavLinks = ({ className }: { className?: string }) => {
   /*~~~~~~~~$ Renders $~~~~~~~~*/
   const navLinksRendering = LinksData.map((link) => (
-    <li key={link.id} className="link">
-      <Link href={link.path} className="link">
+    <li key={link.id}>
+      <Link href={link.path} className="nav__link">
         {link.title}
       </Link>
     </li>

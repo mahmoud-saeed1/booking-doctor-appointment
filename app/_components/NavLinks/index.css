@@ -2,6 +2,6 @@ nav ul{
     @apply items-center justify-center space-x-8
 }
 
-.link{
+.nav__link{
     @apply uppercase hover:text-blue-700 hover:scale-110 transition-all ease-in-out
 }
