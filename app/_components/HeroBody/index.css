@@ -1,0 +1,19 @@
+.hero__body {
+  @apply p-0 col-span-2 overflow-hidden lg:col-span-1 lg:py-24;
+}
+
+.hero__info {
+  @apply flex flex-col space-y-8 text-center lg:text-start;
+}
+
+.hero__headding {
+  @apply text-3xl font-bold sm:text-4xl uppercase overflow-hidden leading-10;
+}
+
+.hero__paragraph {
+  @apply mt-4 text-lg text-gray-600;
+}
+
+.hero__pagination--controls {
+  @apply absolute bottom-0 left-0 right-0;
+}

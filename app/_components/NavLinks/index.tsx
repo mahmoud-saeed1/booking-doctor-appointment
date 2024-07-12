@@ -1,5 +1,5 @@
 import React from "react";
-import { LinksData } from "@/app/data";
+import { LinksData } from "@/app/_data";
 import Link from "next/link";
 import "./index.css";
 
