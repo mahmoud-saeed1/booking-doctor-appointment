@@ -1,0 +1,42 @@
+.category__search {
+  @apply my-10 text-center;
+}
+h2 {
+  @apply text-4xl capitalize font-bold;
+}
+h2 span {
+  @apply text-primary;
+}
+
+h3 {
+  @apply text-gray-600 mt-2;
+}
+
+.search__box {
+  @apply w-fit mx-auto mt-4 flex items-center justify-center;
+}
+
+.search__input {
+  padding: 1.4rem 1rem;
+  border: 2px solid #367bf4 !important;
+  border-right: none !important;
+  transform: translateX(3px);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #367bf4 !important;
+}
+
+.search__input:focus {
+  outline: none !important;
+  border: 2px solid #367bf4 !important;
+  border-right: none !important;
+}
+
+.search__input::placeholder {
+  @apply text-gray-600;
+}
+
+
+.search__btn {
+  @apply py-6 rounded-l-none text-xl capitalize;
+}

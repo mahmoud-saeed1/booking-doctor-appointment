@@ -39,7 +39,7 @@ const HeroBody: React.FC<IHeroBody> = ({
 
         <PaginationControls
           paginate={paginate}
-          className="hero__pagination--controls"
+          className="hero__pagination--controls hidden"
         />
       </div>
     </LazyMotion>

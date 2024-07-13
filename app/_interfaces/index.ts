@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface ILinks {
   id: string;
   title: string;
@@ -22,4 +24,13 @@ export interface IHeroImages {
 
 export interface IHeroBody extends IHeroImages {
   paginate: (newDirection: number) => void;
+}
+
+export interface IIcon extends React.SVGProps<SVGSVGElement> {
+  className?: string;
+}
+
+export interface IIconsContainer {
+  className?: string;
+  children?: ReactNode;
 }
