@@ -1,10 +1,10 @@
 "use client";
-import "./index.css";
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { HeroVariants } from "@/app/_animation";
 import { IHeroBody } from "@/app/_interfaces";
 import { Button } from "@/components/ui/button";
 import PaginationControls from "../PaginationControls/PaginationControls";
+import "./index.css";
 
 const HeroBody: React.FC<IHeroBody> = ({
   page,
@@ -33,7 +33,7 @@ const HeroBody: React.FC<IHeroBody> = ({
             <p className="hero__paragraph">
               {HeroSlidesData[imageIndex].paragraph}
             </p>
-            <Button className="overflow-hidden">Explore More</Button>
+            <Button className="hero__btn">Explore More</Button>
           </m.div>
         </AnimatePresence>
 

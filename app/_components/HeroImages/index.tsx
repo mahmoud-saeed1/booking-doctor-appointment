@@ -1,9 +1,9 @@
 "use client";
-import "./index.css";
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { HeroVariants } from "@/app/_animation";
 import { IHeroImages } from "@/app/_interfaces";
 import Image from "next/image";
+import "./index.css";
 
 const HeroImages: React.FC<IHeroImages> = ({
   page,

@@ -1,9 +1,9 @@
 .hero__image--outerContainer {
-  @apply overflow-hidden h-80 col-span-2 rounded-lg sm:h-96 lg:col-span-1 lg:order-last lg:h-full;
+  @apply overflow-hidden w-full h-80 col-span-2 rounded-lg sm:h-96 lg:col-span-1 lg:order-last lg:h-full;
 }
 
 .hero__image--innerContainer {
-  @apply relative h-80 col-span-2 rounded-lg sm:h-96 lg:col-span-1 lg:order-last lg:h-full;
+  @apply relative w-full h-80 col-span-2 rounded-lg sm:h-96 lg:col-span-1 lg:order-last lg:h-full;
 }
 
 .hero__image {

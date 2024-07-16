@@ -17,3 +17,6 @@
 .hero__pagination--controls {
   @apply absolute bottom-0 left-0 right-0;
 }
+.hero__btn{
+ @apply w-fit m-auto px-8 py-6 rounded-[0.5rem] text-xl tracking-wide uppercase;
+}
