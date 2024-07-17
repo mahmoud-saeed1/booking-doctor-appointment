@@ -1,6 +1,10 @@
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
 .container {
   @apply px-4 py-8 md:px-8 lg:px-16;
+}
+.doctor__card--shadow{
+  box-shadow: 12px 12px 1px rgb(0, 0, 0);
 }

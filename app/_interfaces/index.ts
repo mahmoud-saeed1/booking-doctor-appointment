@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { TSpecialty } from "../types";
 
 export interface ILinks {
   id: string;
@@ -33,4 +34,26 @@ export interface IIcon extends React.SVGProps<SVGSVGElement> {
 export interface IIconsContainer {
   className?: string;
   children?: ReactNode;
+}
+
+export interface IDoctorData {
+  id: string;
+  about: string;
+  address: string;
+  endTime: string;
+  name: string;
+  patients: string;
+  phone: string;
+  startTime: string;
+  premiumTime: string | null;
+  yearsOfExperience: number;
+  specialty: TSpecialty;
+  createdAt: Date;
+  image: string;
+  publishedAt: Date;
+  updatedAt: Date;
+}
+
+export interface IDoctorCard {
+  doctor: IDoctorData;
 }

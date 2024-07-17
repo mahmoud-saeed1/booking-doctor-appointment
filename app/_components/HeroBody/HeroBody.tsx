@@ -1,6 +1,6 @@
 "use client";
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
-import { HeroVariants } from "@/app/_animation";
+import { VHeroVariants } from "@/app/_animation";
 import { IHeroBody } from "@/app/_interfaces";
 import { Button } from "@/components/ui/button";
 import PaginationControls from "../PaginationControls/PaginationControls";
@@ -21,7 +21,7 @@ const HeroBody: React.FC<IHeroBody> = ({
           <m.div
             key={page}
             custom={direction}
-            variants={HeroVariants}
+            variants={VHeroVariants}
             initial="enter"
             animate="center"
             exit="exit"

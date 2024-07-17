@@ -4,62 +4,62 @@ import "./index.css";
 
 const Categories = () => {
   return (
-    <div className="categories__contianer">
+    <ul className="categories__contianer">
       {/*~~~~~~~~$ Dentist $~~~~~~~~*/}
-      <div className="category__card">
+      <li className="category__card">
         <IconContainer className="icon__container">
           <Dentist className="fill-primary" />
         </IconContainer>
 
         <p>dentist</p>
-      </div>
+      </li>
 
       {/*~~~~~~~~$ Heart $~~~~~~~~*/}
-      <div className="category__card">
+      <li className="category__card">
         <IconContainer className="icon__container">
           <Heart className="fill-primary" />
         </IconContainer>
 
         <p>cardiologist</p>
-      </div>
+      </li>
 
       {/*~~~~~~~~$ Bones $~~~~~~~~*/}
-      <div className="category__card">
+      <li className="category__card">
         <IconContainer className="icon__container">
           <Bones className="fill-primary" />
         </IconContainer>
 
         <p>orthopedic</p>
-      </div>
+      </li>
 
       {/*~~~~~~~~$ Brain $~~~~~~~~*/}
-      <div className="category__card">
+      <li className="category__card">
         <IconContainer className="icon__container">
           <Brain className="fill-primary" />
         </IconContainer>
 
         <p>neurologist</p>
-      </div>
+      </li>
 
       {/*~~~~~~~~$ Ear $~~~~~~~~*/}
-      <div className="category__card">
+      <li className="category__card">
         <IconContainer className="icon__container">
           {/* <Ear className="fill-primary"/> */}
           <Ear />
         </IconContainer>
 
         <p>otology</p>
-      </div>
+      </li>
 
       {/*~~~~~~~~$ Doctor $~~~~~~~~*/}
-      <div className="category__card">
+      <li className="category__card">
         <IconContainer className="icon__container">
           <Doctor className="fill-primary" />
         </IconContainer>
 
         <p>general</p>
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 };
 

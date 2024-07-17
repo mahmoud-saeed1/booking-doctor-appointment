@@ -1,6 +1,6 @@
 "use client";
 import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
-import { HeroVariants } from "@/app/_animation";
+import { VHeroVariants } from "@/app/_animation";
 import { IHeroImages } from "@/app/_interfaces";
 import Image from "next/image";
 import "./index.css";
@@ -21,7 +21,7 @@ const HeroImages: React.FC<IHeroImages> = ({
           <m.div
             key={page}
             custom={direction}
-            variants={HeroVariants}
+            variants={VHeroVariants}
             initial="enter"
             animate="center"
             exit="exit"

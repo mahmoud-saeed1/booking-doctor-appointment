@@ -1,5 +1,5 @@
 /*~~~~~~~~$ Hero Animation Variants $~~~~~~~~*/
-export const HeroVariants = {
+export const VHeroVariants = {
   enter: {
     opacity: 0,
     x: -100,
@@ -20,4 +20,10 @@ export const HeroVariants = {
       ease: "easeInOut",
     },
   },
+};
+
+/*~~~~~~~~$ Doctor Card $~~~~~~~~*/
+export const VDoctorCard = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };

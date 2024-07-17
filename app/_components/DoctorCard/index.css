@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.doctor__card{
+  @apply  bg-white col-span-6 h-[435px] p-6 flex flex-col gap-6 rounded-xl ring-blue-900 ring-2 relative;
+}
+
+.image__container--outer{
+  @apply absolute left-1/2 -top-[22%] -translate-x-1/2 bg-white w-48 h-48 rounded-full ring-blue-900 ring-2 flex items-center justify-center overflow-hidden
+}
+
+.image__container--inner{
+  @apply bg-primary w-40 h-40 rounded-full overflow-hidden
+}
+
+.doctor__card img{
+  @apply w-full h-full object-cover;
+}
+
+.card__content{
+  @apply mt-auto flex flex-col gap-6;
+}
+
+.card__content a{
+  @apply bg-primary inline-block self-start py-1 px-3 text-white font-bold text-lg rounded-full;
+}
+
+.card__content h3{
+  @apply text-2xl text-black font-bold tracking-wider;
+}
+
+.card__content h4{
+  @apply text-2xl text-black font-bold
+}
+
+.card__content p{
+  @apply text-lg text-gray-500 justify-items-end
+}
+
+.specialty-box{
+  @apply flex items-end space-x-2 mb-1;
+}
+
+.specialty-box p {
+  @apply text-primary font-semibold capitalize tracking-wider
+}
+
+.card__button{
+  @apply bg-primary py-2 text-lg text-white text-center uppercase font-bold tracking-wider rounded-full hover:ring-primary hover:ring-2 hover:bg-white hover:text-primary transition-all duration-150 ease-in-out
+}
