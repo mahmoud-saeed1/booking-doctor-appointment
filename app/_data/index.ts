@@ -34,7 +34,7 @@ export const HeroSlidesData: IHeroSlidesData[] = [
 export const DoctorsData: IDoctorData[] = [
   {
     id: uuid(),
-    about: "Looking for comfortable, confi",
+    about: "Skilled dentist and Expert in smiles and teeth brightness",
     address: "547 Carrington Trace Drive",
     endTime: "06:00:00.000",
     name: "John Cooper",

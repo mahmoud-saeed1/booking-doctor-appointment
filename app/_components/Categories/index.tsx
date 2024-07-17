@@ -7,7 +7,7 @@ const Categories = () => {
     <ul className="categories__contianer">
       {/*~~~~~~~~$ Dentist $~~~~~~~~*/}
       <li className="category__card">
-        <IconContainer className="icon__container">
+        <IconContainer className="icon__container--category">
           <Dentist className="fill-primary" />
         </IconContainer>
 
@@ -16,7 +16,7 @@ const Categories = () => {
 
       {/*~~~~~~~~$ Heart $~~~~~~~~*/}
       <li className="category__card">
-        <IconContainer className="icon__container">
+        <IconContainer className="icon__container--category">
           <Heart className="fill-primary" />
         </IconContainer>
 
@@ -25,7 +25,7 @@ const Categories = () => {
 
       {/*~~~~~~~~$ Bones $~~~~~~~~*/}
       <li className="category__card">
-        <IconContainer className="icon__container">
+        <IconContainer className="icon__container--category">
           <Bones className="fill-primary" />
         </IconContainer>
 
@@ -34,7 +34,7 @@ const Categories = () => {
 
       {/*~~~~~~~~$ Brain $~~~~~~~~*/}
       <li className="category__card">
-        <IconContainer className="icon__container">
+        <IconContainer className="icon__container--category">
           <Brain className="fill-primary" />
         </IconContainer>
 
@@ -43,7 +43,7 @@ const Categories = () => {
 
       {/*~~~~~~~~$ Ear $~~~~~~~~*/}
       <li className="category__card">
-        <IconContainer className="icon__container">
+        <IconContainer className="icon__container--category">
           {/* <Ear className="fill-primary"/> */}
           <Ear />
         </IconContainer>
@@ -53,7 +53,7 @@ const Categories = () => {
 
       {/*~~~~~~~~$ Doctor $~~~~~~~~*/}
       <li className="category__card">
-        <IconContainer className="icon__container">
+        <IconContainer className="icon__container--category">
           <Doctor className="fill-primary" />
         </IconContainer>
 

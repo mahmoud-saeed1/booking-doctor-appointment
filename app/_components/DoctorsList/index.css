@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.doctors__list{
-    @apply mt-40 grid grid-cols-6 place-items-center space-y-40;
+.doctors__list {
+  @apply mt-40 grid grid-cols-6 gap-y-40 place-items-center;  /* Adjust gap for spacing between doctors */
 }
