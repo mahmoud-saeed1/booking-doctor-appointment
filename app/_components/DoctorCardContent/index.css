@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card__content {
+  @apply mt-auto flex flex-col items-center justify-center;
+}
+
+.card__content h3 {
+  @apply text-xl text-black text-center font-bold tracking-wider whitespace-nowrap;
+}
+
+.card__content p {
+  @apply text-blue-900 font-semibold capitalize;
+}
+
+.card__content > p:last-child {
+  @apply text-gray-600 font-normal inline-block whitespace-pre-line text-center;
+}
+
+.specialty-box {
+  @apply flex items-end justify-center translate-y-4;
+}
+
+.specialty-box p {
+  @apply text-primary text-lg font-semibold capitalize tracking-wider;
+}
+
+.more__button {
+  @apply bg-none border-none text-primary cursor-pointer translate-x-1;
+}

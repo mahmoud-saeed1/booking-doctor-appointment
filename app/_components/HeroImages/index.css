@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .hero__image--outerContainer {
   @apply overflow-hidden w-full h-80 col-span-2 rounded-lg sm:h-96 lg:col-span-1 lg:order-last lg:h-full;
 }

@@ -1,5 +1,15 @@
 import { IDoctorData, IHeroSlidesData, ILinks } from "../_interfaces";
 import { v4 as uuid } from "uuid";
+import { Bones, Brain, Dentist, Doctor, Ear, Heart } from "@/app/_icons";
+
+export const CategoriesIcons = [
+  { id: uuid(), icon: Dentist, label: "dentist" },
+  { id: uuid(), icon: Heart, label: "cardiologist" },
+  { id: uuid(), icon: Bones, label: "orthopedic" },
+  { id: uuid(), icon: Brain, label: "neurologist" },
+  { id: uuid(), icon: Ear, label: "otology" },
+  { id: uuid(), icon: Doctor, label: "general" },
+];
 
 export const LinksData: ILinks[] = [
   { id: uuid(), title: "home", path: "/" },
@@ -243,3 +253,5 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-06-16T19:40:30.789Z"),
   },
 ];
+
+

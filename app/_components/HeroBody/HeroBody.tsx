@@ -3,7 +3,7 @@ import { m, AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import { VHeroVariants } from "@/app/_animation";
 import { IHeroBody } from "@/app/_interfaces";
 import { Button } from "@/components/ui/button";
-import PaginationControls from "../PaginationControls/PaginationControls";
+import PaginationControls from "../PaginationControls";
 import "./index.css";
 
 const HeroBody: React.FC<IHeroBody> = ({

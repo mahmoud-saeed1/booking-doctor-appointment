@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
+import "./index.css"
+
 interface IPaginationControls {
   className?: string;
   paginate: (value: number) => void;
@@ -7,7 +9,7 @@ interface IPaginationControls {
 
 const PaginationControls = ({ className, paginate }: IPaginationControls) => {
   return (
-    <div className={`${className} p-4 flex items-center justify-between`}>
+    <div className={`${className} .pagination-controls`}>
       <Button onClick={() => paginate(-1)}>←</Button>
       <Button onClick={() => paginate(1)}>→</Button>
     </div>

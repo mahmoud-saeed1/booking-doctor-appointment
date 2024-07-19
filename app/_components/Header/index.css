@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .header {
   @apply h-20 p-4 shadow-md flex items-center justify-between;
 }

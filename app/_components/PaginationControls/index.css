@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pagination-controls{
+    @apply p-4 flex items-center justify-between;
+}

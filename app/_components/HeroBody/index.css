@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .hero__body {
   @apply p-0 col-span-2 overflow-hidden lg:col-span-1 lg:py-24;
 }

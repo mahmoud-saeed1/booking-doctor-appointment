@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.image__container--outer {
+  @apply absolute left-1/2 -top-[22%] -translate-x-1/2 bg-white w-48 h-48 rounded-full ring-blue-900 ring-2 flex items-center justify-center overflow-hidden;
+}
+
+.image__container--inner {
+  @apply bg-primary w-40 h-40 rounded-full overflow-hidden;
+}
+
+.doctor__image {
+  @apply w-full h-full object-cover;
+}
