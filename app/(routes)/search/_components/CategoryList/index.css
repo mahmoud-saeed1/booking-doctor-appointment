@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.categoires__section{
+    @apply h-screen mt-5 flex flex-col overflow-visible
+}
+
+.categoreis__container{
+    @apply flex flex-col space-y-2
+}
+
+.category{
+    @apply w-full flex items-center space-x-2 cursor-pointer
+}
+
+p{
+    @apply text-primary capitalize
+}
