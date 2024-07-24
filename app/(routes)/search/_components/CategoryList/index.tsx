@@ -1,3 +1,4 @@
+"use client"
 import {
   Command,
   CommandEmpty,
@@ -5,19 +6,23 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-  CommandSeparator,
 } from "@/components/ui/command";
 import { CategoriesIcons } from "@/app/_data";
 import IconContainer from "@/app/_components/IconContainer";
-import "./index.css";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import "./index.css";
 
 const CategoryList = () => {
+  /*~~~~~~~~$ Global Variables $~~~~~~~~*/
+  const params= usePathname();
+  const category = params.split("/")[2];
+
   /*~~~~~~~~$ Renders $~~~~~~~~*/
   const categoryListRenderer = CategoriesIcons.map(
     ({ icon: Icon, label }, index) => (
       <CommandItem key={index} className="data-[]:">
-        <Link href="/" className="category">
+        <Link href={`/search/${label}`} className={`category ${label === category && "bg-blue-100"}`}>
           <IconContainer className="icon__container--category">
             <Icon />
           </IconContainer>

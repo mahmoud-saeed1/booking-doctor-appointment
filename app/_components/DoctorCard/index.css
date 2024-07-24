@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 .doctor__card{
-  @apply  bg-white col-span-6 w-72 min-h-[435px] p-6 flex flex-col gap-6 rounded-xl ring-blue-900 ring-2 relative sm:col-span-3 xl:col-span-2;
+  @apply  bg-white w-56 h-[350px] p-4 flex flex-col gap-0 rounded-xl ring-blue-900 ring-2 relative xl:col-span-2;
 }
 
 .image__container--outer{
-  @apply absolute left-1/2 -top-[22%] -translate-x-1/2 bg-white w-48 h-48 rounded-full ring-blue-900 ring-2 flex items-center justify-center overflow-hidden
+  @apply absolute w-32 h-32 left-1/2 -top-[19%] -translate-x-1/2 bg-white rounded-full ring-blue-900 ring-2 flex items-center justify-center overflow-hidden
 }
 
 .image__container--inner{
-  @apply bg-primary w-40 h-40 rounded-full overflow-hidden
+  @apply bg-primary w-[6.5rem] h-[6.5rem] rounded-full overflow-hidden
 }
 
 .doctor__card img{
@@ -19,7 +19,7 @@
 }
 
 .card__content{
-  @apply mt-auto flex flex-col items-center justify-center gap-6;
+  @apply flex flex-col items-center justify-center;
 }
 
 .card__content a{
@@ -27,30 +27,30 @@
 }
 
 .card__content h3{
-  @apply text-2xl text-black font-bold tracking-wider;
+  @apply text-lg text-black font-bold tracking-wider;
 }
 
 .card__content h4{
-  @apply text-2xl text-black font-bold
+  @apply text-xl text-black font-bold
 }
 .card__content p{
-  @apply text-blue-900 font-semibold capitalize
+  @apply text-blue-900 text-sm my-3 font-semibold capitalize
 }
 
 .card__content > p:last-child{
-  @apply text-gray-600 font-normal  inline-block whitespace-pre-line text-center
+  @apply text-gray-600 text-xs font-normal inline-block whitespace-pre-line text-center
 }
 
 .specialty-box{
-  @apply flex items-end space-x-2 mb-1;
+  @apply my-2 flex items-center space-x-2;
 }
 
 .specialty-box p {
-  @apply text-primary text-lg font-semibold capitalize tracking-wider
+  @apply text-primary my-6 text-sm font-semibold capitalize tracking-wider
 }
 
 .card__button{
-  @apply bg-primary py-2 text-lg text-white text-center uppercase font-bold tracking-wider rounded-full hover:ring-primary hover:ring-2 hover:bg-white hover:text-primary transition-all duration-150 ease-in-out
+  @apply bg-primary m-0 py-2 text-sm text-white text-center uppercase font-bold tracking-wider rounded-full hover:ring-primary hover:ring-2 hover:bg-white hover:text-primary hover:tracking-widest transition-all duration-300 ease-in-out
 }
 .more__button {
   background: none !important;
@@ -62,5 +62,5 @@
   display: inline-block !important;
 }
 .more__button{
-  @apply bg-none border-none text-primary cursor-pointer translate-x-1
+  @apply bg-none border-none text-primary text-xs cursor-pointer
 }

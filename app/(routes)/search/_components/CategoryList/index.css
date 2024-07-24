@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .categoires__section{
-    @apply h-screen mt-5 flex flex-col overflow-visible
+    @apply h-screen mt-5 p-4 flex flex-col overflow-visible
 }
 
 .categoreis__container{
@@ -11,7 +11,7 @@
 }
 
 .category{
-    @apply w-full flex items-center space-x-2 cursor-pointer
+    @apply w-full p-2 flex items-center space-x-2 cursor-pointer rounded-[0.3rem] hover:bg-slate-300 transition-all duration-200 ease-in-out
 }
 
 p{

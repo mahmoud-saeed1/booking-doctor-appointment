@@ -10,13 +10,15 @@ interface DoctorCardImageProps {
 const DoctorCardImage: FC<DoctorCardImageProps> = ({ image, name }) => (
   <div className="image__container--outer">
     <div className="image__container--inner">
-      <Image
-        src={image}
-        alt={name}
-        width={384}
-        height={216}
-        className="doctor__image"
-      />
+      {image && (
+        <Image
+          src={image}
+          alt={name}
+          width={384}
+          height={216}
+          className="doctor__image"
+        />
+      )}
     </div>
   </div>
 );

@@ -29,3 +29,7 @@
 .more__button {
   @apply bg-none border-none text-primary cursor-pointer translate-x-1;
 }
+
+.icon__container{
+  @apply w-6 h-6
+}

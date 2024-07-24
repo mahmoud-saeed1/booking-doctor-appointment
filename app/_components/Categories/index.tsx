@@ -1,19 +1,20 @@
 import IconContainer from "../IconContainer";
 import { CategoriesIcons } from "@/app/_data";
 import "./index.css";
+import Link from "next/link";
 
 const Categories = () => {
   return (
-    <ul className="categories__contianer">
+    <div className="categories__contianer">
       {CategoriesIcons.map(({ icon: Icon, label }, index) => (
-        <li key={index} className="category__card">
+        <Link href={`/search/${label}`} className="category__card">
           <IconContainer className="icon__container--category">
             <Icon className="fill-primary" />
           </IconContainer>
           <p>{label}</p>
-        </li>
+        </Link>
       ))}
-    </ul>
+    </div>
   );
 };
 

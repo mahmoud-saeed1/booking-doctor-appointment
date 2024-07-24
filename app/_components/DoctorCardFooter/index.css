@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .card__button {
-  @apply bg-primary py-2 text-lg text-white text-center uppercase font-bold tracking-wider rounded-full hover:ring-primary hover:ring-2 hover:bg-white hover:text-primary transition-all duration-150 ease-in-out;
+  @apply bg-primary py-2 text-sm text-white text-center uppercase font-bold tracking-wider rounded-full hover:ring-primary hover:ring-2 hover:bg-white hover:text-primary transition-all duration-200 ease-in-out;
 }
