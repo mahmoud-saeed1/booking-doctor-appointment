@@ -27,7 +27,7 @@ const DoctorCardContent: FC<DoctorCardContentProps> = ({ doctor }) => {
         <IconContainer className="icon__container">
           {SpecialtyIcon && <SpecialtyIcon />}
         </IconContainer>
-        <p>{specialty}</p>
+        <h2>{specialty}</h2>
       </div>
 
       <h3>{`Dr. ${name}`}</h3>

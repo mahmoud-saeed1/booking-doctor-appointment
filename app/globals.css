@@ -2,9 +2,26 @@
   @tailwind components;
   @tailwind utilities;
 
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-3;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-200;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 rounded-md border-2 border-gray-200 hover:bg-blue-700;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-corner {
+    @apply bg-gray-200;
+  }
+
 .container {
   @apply px-4 py-8 md:px-8 lg:px-16;
 }
 .doctor__card--shadow{
   box-shadow: 12px 12px 1px rgb(0, 0, 0);
 }
+

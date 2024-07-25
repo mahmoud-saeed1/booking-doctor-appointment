@@ -22,7 +22,7 @@
   @apply flex items-end justify-center translate-y-4;
 }
 
-.specialty-box p {
+.specialty-box h2 {
   @apply text-primary text-lg font-semibold capitalize tracking-wider;
 }
 

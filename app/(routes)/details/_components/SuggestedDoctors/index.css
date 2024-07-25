@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.suggested-doctors {
+    @apply bg-white rounded-xl p-6 w-screen relative lg:w-full md:mt-16;
+  }
+  
+  .suggested-doctors__title {
+    @apply absolute top-1 bg-white px-1 text-xl md:text-2xl font-bold text-blue-900 tracking-wider z-20;
+  }
+  
+  .suggested-doctors__carousel {
+    @apply relative py-6 flex items-center -translate-x-10 gap-x-5 border-t-[3px] border-b-[3px] border-blue-900 whitespace-nowrap overflow-x-scroll overflow-y-hidden scrollbar-none scroll-smooth md:translate-x-0 lg:scrollbar-thin lg:scrollbar-thumb-blue-600 lg:scrollbar-track-blue-200;
+  }
+  

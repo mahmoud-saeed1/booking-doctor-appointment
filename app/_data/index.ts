@@ -95,7 +95,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Neurologist specializing in the treatment of migraines and chronic pain",
+    about:
+      "Neurologist specializing in the treatment of migraines and chronic pain",
     address: "456 Brain Center Boulevard",
     endTime: "07:00:00.000",
     name: "James Chen",
@@ -146,7 +147,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Highly skilled dentist with a focus on cosmetic and restorative procedures",
+    about:
+      "Highly skilled dentist with a focus on cosmetic and restorative procedures",
     address: "789 Pearly Whites Way",
     endTime: "07:00:00.000",
     name: "John Nguyen",
@@ -163,7 +165,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Cardiology specialist with expertise in minimally invasive procedures",
+    about:
+      "Cardiology specialist with expertise in minimally invasive procedures",
     address: "246 Heartbeat Clinic",
     endTime: "07:00:00.000",
     name: "Robert Huang",
@@ -180,7 +183,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Orthopedic surgeon specializing in joint replacement and sports medicine",
+    about:
+      "Orthopedic surgeon specializing in joint replacement and sports medicine",
     address: "369 Bone & Joint Clinic",
     endTime: "08:00:00.000",
     name: "James Gomez",
@@ -197,7 +201,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Neurologist specializing in the treatment of neurological disorders",
+    about:
+      "Neurologist specializing in the treatment of neurological disorders",
     address: "741 Brain Health Clinic",
     endTime: "07:00:00.000",
     name: "Aidan Khan",
@@ -214,7 +219,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Otologist specializing in the treatment of ear disorders and hearing loss",
+    about:
+      "Otologist specializing in the treatment of ear disorders and hearing loss",
     address: "963 Ear & Hearing Center",
     endTime: "07:00:00.000",
     name: "Anthony Flores",
@@ -265,7 +271,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Cardiology expert with a focus on heart disease prevention and treatment",
+    about:
+      "Cardiology expert with a focus on heart disease prevention and treatment",
     address: "357 Heart & Health Blvd",
     endTime: "07:00:00.000",
     name: "Ethan Roberts",
@@ -333,7 +340,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "General practitioner focusing on preventive care and chronic disease management",
+    about:
+      "General practitioner focusing on preventive care and chronic disease management",
     address: "852 General Wellness Blvd",
     endTime: "07:00:00.000",
     name: "Ryan Walker",
@@ -401,7 +409,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Neurologist specializing in movement disorders and Parkinson's disease",
+    about:
+      "Neurologist specializing in movement disorders and Parkinson's disease",
     address: "159 Neurology Clinic Blvd",
     endTime: "07:00:00.000",
     name: "Mason Bennett",
@@ -469,7 +478,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Cardiologist focusing on pediatric cardiology and congenital heart defects",
+    about:
+      "Cardiologist focusing on pediatric cardiology and congenital heart defects",
     address: "159 Child Heart Center",
     endTime: "07:00:00.000",
     name: "Daniel Clark",
@@ -741,7 +751,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "General practitioner focusing on preventive healthcare for families",
+    about:
+      "General practitioner focusing on preventive healthcare for families",
     address: "852 Family Health Blvd",
     endTime: "07:00:00.000",
     name: "Sebastian Anderson",
@@ -775,7 +786,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Cardiologist specializing in advanced heart failure and transplantation",
+    about:
+      "Cardiologist specializing in advanced heart failure and transplantation",
     address: "456 Heart Failure Clinic",
     endTime: "07:00:00.000",
     name: "Aiden Jones",
@@ -826,7 +838,8 @@ export const DoctorsData: IDoctorData[] = [
   },
   {
     id: uuid(),
-    about: "Otologist with expertise in balance disorders and vestibular rehabilitation",
+    about:
+      "Otologist with expertise in balance disorders and vestibular rehabilitation",
     address: "741 Balance Health Blvd",
     endTime: "07:00:00.000",
     name: "Henry Martinez",
@@ -892,7 +905,22 @@ export const DoctorsData: IDoctorData[] = [
     publishedAt: new Date("2023-09-05T10:27:18.765Z"),
     updatedAt: new Date("2023-09-06T13:20:28.543Z"),
   },
-
 ];
 
-
+export const EmbtyDoctorObj = {
+  id: uuid(),
+  about: "Dentist with a focus on endodontics and root canal therapy",
+  address: "159 EndoCare Blvd",
+  endTime: "07:00:00.000",
+  name: "David Brown",
+  patients: "320",
+  phone: "03334445533",
+  startTime: "09:00:00.000",
+  premiumTime: "13:00:00.000 - 15:00:00.000",
+  yearsOfExperience: 9,
+  specialty: "dentist",
+  createdAt: new Date("2023-11-22T09:10:00.000Z"),
+  image: require("/public/doctors/doctor49.webp"),
+  publishedAt: new Date("2023-11-22T09:17:28.432Z"),
+  updatedAt: new Date("2023-11-23T12:45:30.987Z"),
+};

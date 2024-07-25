@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import { TSpecialty } from "../types";
 
 export interface ILinks {
@@ -56,4 +56,17 @@ export interface IDoctorData {
 
 export interface IDoctorCard {
   doctor: IDoctorData;
+}
+
+export interface ISocialLinks {
+  id: string;
+  plateform: string;
+  label: string;
+  URL: string;
+  icon?: FC<React.SVGProps<SVGSVGElement>>;
+}
+
+export interface ISocials {
+  className?: string;
+  socialLinks?: ISocialLinks[];
 }

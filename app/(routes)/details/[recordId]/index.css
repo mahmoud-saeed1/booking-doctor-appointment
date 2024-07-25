@@ -1,0 +1,11 @@
+.image__container{
+    @apply bg-white w-32 h-32 rounded-full ring-blue-900 ring-2 flex items-center justify-center
+  }
+  
+  .image__container--in{
+    @apply bg-primary w-[6.5rem] h-[6.5rem] rounded-full overflow-hidden
+  }
+  
+  .doctor__card img{
+    @apply w-full h-full object-cover;
+  }

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.doctor-body {
+    @apply text-center md:text-left;
+  }
+  
+  .doctor-body__specialty-box {
+    @apply mt-4 mb-2 flex items-center justify-center md:mt-0 md:mb-4 md:justify-start md:space-x-2;
+  }
+  
+  .doctor-body__icon {
+    @apply w-10 h-10;
+  }
+  
+  .doctor-body__specialty {
+    @apply text-2xl text-primary font-semibold capitalize;
+  }
+  
+  .doctor-body__name {
+    @apply text-3xl mt-6 font-bold text-blue-700 mb-2;
+  }
+  
+  .doctor-body__about {
+    @apply text-gray-700 mb-4;
+  }
+  

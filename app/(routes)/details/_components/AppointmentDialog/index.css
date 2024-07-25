@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.appointment-dialog__trigger {
+    @apply bg-primary px-4 py-2 rounded-lg text-white mt-4 text-lg font-bold tracking-wider capitalize hover:bg-transparent hover:ring-2 hover:ring-primary hover:text-primary hover:tracking-widest transition-all duration-200 ease-in-out;
+  }
+  

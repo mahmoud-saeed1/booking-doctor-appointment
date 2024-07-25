@@ -1,11 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
-import { DoctorsData } from "@/app/_data";
+import { CategoriesIcons, DoctorsData } from "@/app/_data";
 import { IDoctorData } from "@/app/_interfaces";
-import DoctorImage from "../_components/DoctorImage";
-import SuggestedDoctors from "../_components/SuggestedDoctors";
-import DoctorBody from "../_components/DoctorBody";
-import "./index.css";
+
+import "./Details.css";
+import AppointmentDialog from "../AppointmentDialog";
+import DoctorImage from "../DoctorImage";
+import DoctorBody from "../DoctorBody";
+import SuggestedDoctors from "../SuggestedDoctors";
 
 /*~~~~~~~~$ Details Component $~~~~~~~~*/
 const Details = ({ params }: { params: { recordId: string } }) => {
@@ -29,18 +31,20 @@ const Details = ({ params }: { params: { recordId: string } }) => {
     setSuggestedDoctors(sameSpecializationDoctors);
   }, [params.recordId]);
 
+  const SpecialtyIcon = CategoriesIcons.find(
+    (icon) => icon.label === doctorData?.specialty
+  )?.icon;
+
   /*~~~~~~~~$ Render $~~~~~~~~*/
   return (
-    <section className="container">
+    <section className="details container">
       {/*~~~~~~~~$ Doctor Data $~~~~~~~~*/}
       {doctorData && (
-        <div className="mx-auto ring-2 ring-blue-900 rounded-xl p-6 mb-8 shadow-card-shadow">
-          <div className="flex flex-col items-center md:flex-row md:space-x-10">
-            {/*~~~~~~~~$ Image $~~~~~~~~*/}
+        <div className="details__doctor-data">
+          <div className="details__content">
             <DoctorImage image={doctorData.image} name={doctorData.name} />
-
-            {/*~~~~~~~~$ Body $~~~~~~~~*/}
-            <DoctorBody doctorData={doctorData} />
+            <DoctorBody doctorData={doctorData} SpecialtyIcon={SpecialtyIcon} />
+            <AppointmentDialog />
           </div>
         </div>
       )}

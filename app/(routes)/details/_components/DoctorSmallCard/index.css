@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.doctor-card {
+    @apply min-w-44 min-h-64 shadow-md rounded-xl transition-transform duration-300 hover:scale-105;
+  }
+  
+  .doctor-card__content {
+    @apply flex flex-col items-center p-4 rounded-lg;
+  }
+  
+  .doctor-card__image-container {
+    @apply bg-white w-32 h-32 rounded-full ring-blue-900 ring-2 flex items-center justify-center;
+  }
+  
+  .doctor-card__image-inner {
+    @apply bg-primary w-28 h-28 rounded-full overflow-hidden;
+  }
+  
+  .doctor-card__image {
+    @apply w-full h-full object-cover;
+  }
+  
+  .doctor-card__body {
+    @apply text-center;
+  }
+  
+  .doctor-card__specialty-box {
+    @apply h-full mt-4 mb-1 flex items-center justify-center space-x-1;
+  }
+  
+  .doctor-card__icon {
+    @apply w-6 h-6;
+  }
+  
+  .doctor-card__specialty {
+    @apply text-primary font-semibold capitalize;
+  }
+  
+  .doctor-card__name {
+    @apply text-lg text-center text-gray-800 font-semibold whitespace-normal;
+  }
+  

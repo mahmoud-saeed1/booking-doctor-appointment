@@ -23,7 +23,7 @@ const DoctorCard: FC<IDoctorCard> = ({ doctor }) => {
       >
         <DoctorCardImage image={image} name={name} />
         <DoctorCardContent doctor={doctor} />
-        <DoctorCardFooter />
+        <DoctorCardFooter doctorID={doctor.id}/>
       </m.div>
     </LazyMotion>
   );

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.doctor-image {
+    @apply bg-white w-48 h-48 rounded-full ring-blue-900 ring-2 flex items-center justify-center sm:w-52 sm:h-52 md:min-w-56 md:min-h-56 lg:w-64 lg:h-64;
+  }
+  
+  .doctor-image__inner {
+    @apply bg-primary w-40 h-40 rounded-full overflow-hidden sm:w-44 sm:h-44 md:w-48 md:h-48 lg:w-56 lg:h-56;
+  }
+  
+  .doctor-image__img {
+    @apply w-full h-full object-cover;
+  }
+  

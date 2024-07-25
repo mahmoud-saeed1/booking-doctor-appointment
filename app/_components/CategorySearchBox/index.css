@@ -38,7 +38,7 @@
   }
   
   .search__input::placeholder {
-    @apply text-gray-600;
+    @apply text-gray-600 !important;
   }
   
   .search__btn{
