@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-image-container {
+  @apply relative h-full;
+}

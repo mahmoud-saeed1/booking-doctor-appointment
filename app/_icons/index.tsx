@@ -1,5 +1,19 @@
 import { IIcon } from "../_interfaces";
 
+export const Arrow: React.FC<IIcon> = ({ className = "", ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlSpace="preserve"
+    width={800}
+    height={800}
+    className={`${className} w-full h-full scale-150 fill-white`}
+    viewBox="0 0 330 330"
+    {...rest}
+  >
+    <path d="M315 150H51.213l11.894-11.894c5.858-5.858 5.858-15.355 0-21.213-5.858-5.858-15.355-5.858-21.213 0l-37.5 37.5c-5.858 5.858-5.858 15.355 0 21.213l37.5 37.5A14.954 14.954 0 0 0 52.5 217.5a14.95 14.95 0 0 0 10.607-4.394c5.858-5.858 5.858-15.355 0-21.213L51.213 180H315c8.284 0 15-6.716 15-15s-6.716-15-15-15z" />
+  </svg>
+);
+
 export const Search: React.FC<IIcon> = ({ className = "", ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -96,13 +110,13 @@ export const Brain: React.FC<IIcon> = ({ className = "", ...rest }) => (
 
 export const Ear: React.FC<IIcon> = ({ className = "", ...rest }) => (
   <svg
-  xmlns="http://www.w3.org/2000/svg"
-  width={800}
-  height={800}
-  aria-hidden="true"
-  viewBox="0 0 512 512"
-  className={`${className} w-full h-full`}
-  {...rest}
+    xmlns="http://www.w3.org/2000/svg"
+    width={800}
+    height={800}
+    aria-hidden="true"
+    viewBox="0 0 512 512"
+    className={`${className} w-full h-full`}
+    {...rest}
   >
     <path
       fill="#367bf4"

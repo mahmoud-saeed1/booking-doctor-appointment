@@ -1,7 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.hero {
+  @apply relative w-full h-screen overflow-hidden flex items-center justify-center md:flex-row flex-col;
+}
 
-.image__container{
-    @apply grid grid-cols-2 gap-8 py-8 overflow-hidden sm:py-12 lg:py-16
+.slides-container{
+  @apply absolute inset-0 flex flex-col md:grid  md:grid-cols-2 h-full
 }

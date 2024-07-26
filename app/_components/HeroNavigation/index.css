@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-navigation-container {
+  @apply absolute left-1/2 transform -translate-x-1/2 flex flex-col space-y-2 z-30;
+}
+
+.hero-nav-button {
+  @apply bg-white text-black p-2 rounded-full shadow-lg mx-2;
+}
+
+.hero-nav-button{
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 50% !important;
+  background-color: #1d4ed8 !important;
+}

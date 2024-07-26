@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-content-container {
+  @apply max-h-[60%] flex items-center justify-center p-8 md:max-h-[100%] md:bg-none md:p-16 text-center md:text-left;
+}
+.hero-text {
+  @apply text-black space-y-6 max-w-lg;
+}
+

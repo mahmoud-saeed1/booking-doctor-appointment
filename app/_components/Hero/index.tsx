@@ -1,48 +1,54 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
+import HeroContent from "../HeroContent";
+import HeroImage from "../HeroImage";
+import HeroNavigation from "../HeroNavigation";
 import { HeroSlidesData } from "@/app/_data";
-import { WrapIndex } from "@/app/_utils";
-import HeroImages from "../HeroImages";
-import HeroBody from "../HeroBody/HeroBody";
 import "./index.css";
 
-const Hero: React.FC = () => {
-  const [[page, direction], setPage] = useState([0, 0]);
+const Hero = () => {
+  /*~~~~~~~~$ States $~~~~~~~~*/
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const imageIndex = WrapIndex(0, HeroSlidesData.length, page);
-
-  const paginate = (newDirection: number) => {
-    setPage([page + newDirection, newDirection]);
-  };
-
+  /*~~~~~~~~$ Effects $~~~~~~~~*/
   useEffect(() => {
     const interval = setInterval(() => {
-      paginate(1);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % HeroSlidesData.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, [page]);
+  }, []);
+
+  /*~~~~~~~~$ Handlers $~~~~~~~~*/
+  const handleNextHandler = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % HeroSlidesData.length);
+  };
+
+  const handlePrevHandler = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? HeroSlidesData.length - 1 : prevIndex - 1
+    );
+  };
+
+  /*~~~~~~~~$ Render $~~~~~~~~*/
+  const heroSlidesRender = HeroSlidesData.map((slide, index) =>
+    index === currentIndex ? (
+      <div
+        key={slide.id}
+        className="slides-container"
+      >
+        <HeroContent heading={slide.heading} paragraph={slide.paragraph} />
+        <HeroImage imageSrc={slide.image} altText={slide.heading} />
+      </div>
+    ) : null
+  );
 
   return (
-    <section className="overflow-hidden container">
-      <div className="image__container">
-        <HeroImages
-          HeroSlidesData={HeroSlidesData}
-          direction={direction}
-          imageIndex={imageIndex}
-          key={`image-${page}`}
-          page={page}
-        />
+    <div className="hero container">
+      <AnimatePresence>{heroSlidesRender}</AnimatePresence>
 
-        <HeroBody
-          HeroSlidesData={HeroSlidesData}
-          direction={direction}
-          imageIndex={imageIndex}
-          key={`body-${page}`}
-          page={page}
-          paginate={paginate}
-        />
-      </div>
-    </section>
+      <HeroNavigation onPrev={handlePrevHandler} onNext={handleNextHandler} />
+    </div>
   );
 };
 

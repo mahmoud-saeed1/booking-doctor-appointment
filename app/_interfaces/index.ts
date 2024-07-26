@@ -7,20 +7,19 @@ export interface ILinks {
   path: string;
 }
 
-export interface IHeroSlidesData {
-  id: string;
-  image: string;
-  headding: string;
-  paragraph: string;
-  className?: string;
-}
-
 export interface IHeroImages {
   page: number;
   direction: number;
   HeroSlidesData: IHeroSlidesData[];
   imageIndex: number;
   className?: string;
+}
+
+export interface IHeroSlidesData {
+  id: string;
+  image: string;
+  heading: string;
+  paragraph: string;
 }
 
 export interface IHeroBody extends IHeroImages {
@@ -69,4 +68,32 @@ export interface ISocialLinks {
 export interface ISocials {
   className?: string;
   socialLinks?: ISocialLinks[];
+}
+
+export interface IHeroSlidesData {
+  id: string;
+  image: string;
+  heading: string;
+  paragraph: string;
+}
+
+export interface IHeroContentProps {
+  heading: string;
+  paragraph: string;
+}
+
+export interface IHeroImageProps {
+  imageSrc: string;
+  altText: string;
+}
+
+export interface IHeroNavigationProps {
+  onPrev: () => void;
+  onNext: () => void;
+}
+
+export interface ILinkButton {
+  className?: string;
+  label: string;
+  path: string;
 }
