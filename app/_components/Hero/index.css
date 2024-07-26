@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-section{
-    @apply overflow-hidden;
-}
-
 .image__container{
     @apply grid grid-cols-2 gap-8 py-8 overflow-hidden sm:py-12 lg:py-16
 }

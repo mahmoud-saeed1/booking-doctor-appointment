@@ -19,7 +19,7 @@
   }
 
 .container {
-  @apply px-4 py-8 md:px-8 lg:px-16;
+  @apply px-4 py-8 md:px-8 lg:px-60 xl:px-60 ;
 }
 .doctor__card--shadow{
   box-shadow: 12px 12px 1px rgb(0, 0, 0);

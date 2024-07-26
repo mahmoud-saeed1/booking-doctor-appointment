@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <GategorySearch />
-      <DoctorsList />
+        <GategorySearch />
+        <DoctorsList />
     </main>
   );
 }

@@ -6,9 +6,9 @@ import "./index.css";
 
 const Header = () => {
   return (
-    <header className="header container">
+    <header className="header__container container">
       <Image src={"/Logo.svg"} alt="Logo" width={180} height={80} />
-      <NavLinks className="hidden md:flex"/>
+      <NavLinks className="hidden md:flex" />
       <Button>get started</Button>
     </header>
   );

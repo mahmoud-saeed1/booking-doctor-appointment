@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 .categories__contianer {
-    @apply grid grid-cols-6 gap-4 items-center justify-center;
+    @apply grid grid-cols-6 gap-4 items-center justify-center xl:gap-10;
 }
 
 .category__card {
-    @apply bg-blue-50 h-28 col-span-2 flex flex-col items-center justify-center space-y-2 rounded-[0.5rem] sm:h-32 sm:space-y-4 md:h-44 md:space-y-6 lg:col-span-1;
+    @apply bg-blue-50 sm:bg-green-500 md:bg-red-400 h-24 p-10 col-span-2 flex flex-col items-center justify-center space-y-2 rounded-xl sm:h-32 sm:space-y-4 md:h-40 lg:col-span-1 xl:h-32;
 }
 
 .category__card p {
-    @apply text-center text-lg capitalize sm:text-xl md:text-2xl lg:text-xl;
+    @apply text-blue-700 text-center text-sm font-bold capitalize sm:text-xl sm:tracking-wider md:text-2xl lg:text-xl;
 }
 
 .icon__container--category {
-    @apply w-12 h-12 sm:w-20 sm:h-20 lg:w-28 lg:h-28 font-bold;
+    @apply w-14 h-14 sm:w-28 sm:h-28 lg:w-28 lg:h-28;
 }

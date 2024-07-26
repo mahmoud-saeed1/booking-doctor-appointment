@@ -68,7 +68,7 @@ const Pagination = <T,>({
   /*~~~~~~~~$ Render $~~~~~~~~*/
   return (
     <div>
-      <div className="paginated-content mt-40 grid grid-cols-6 gap-y-40 place-items-center">
+      <div className="paginated-content mt-40 grid grid-cols-6 gap-y-28 gap-x-0 place-items-center">
         {paginatedData.map((item, index) => (
           <div key={index} className="col-span-6 sm:col-span-3 lg:col-span-2">{component(item)}</div>
         ))}
