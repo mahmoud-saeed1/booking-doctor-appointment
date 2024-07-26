@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .doctor__card{
-  @apply  bg-white w-56 h-[350px] p-4 flex flex-col gap-0 rounded-xl ring-blue-900 ring-2 relative xl:col-span-2;
+  @apply  bg-white max-w-64 h-[325px] p-4 flex flex-col gap-0 rounded-xl ring-blue-900 ring-2 relative sm:max-w-xs xl:col-span-2;
 }
 
 .image__container--outer{

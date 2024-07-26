@@ -97,3 +97,9 @@ export interface ILinkButton {
   label: string;
   path: string;
 }
+
+export interface ISectionTilel {
+  className?: string;
+  title: string;
+  children?: ReactNode;
+}

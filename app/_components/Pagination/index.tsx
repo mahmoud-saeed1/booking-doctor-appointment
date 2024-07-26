@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import IconContainer from "../IconContainer";
+import { Arrow } from "@/app/_icons";
+import { Button } from "@/components/ui/button";
 
 /*~~~~~~~~$ Pagination Component $~~~~~~~~*/
 interface PaginationProps<T> {
@@ -68,20 +71,24 @@ const Pagination = <T,>({
   /*~~~~~~~~$ Render $~~~~~~~~*/
   return (
     <div>
-      <div className="paginated-content mt-40 grid grid-cols-6 gap-y-28 gap-x-0 place-items-center">
+      <div className="paginated-content mt-40 grid grid-cols-6 gap-y-28 gap-x-0 place-items-center sm:gap-x-14 xl:gap-y-40">
         {paginatedData.map((item, index) => (
-          <div key={index} className="col-span-6 sm:col-span-3 lg:col-span-2">{component(item)}</div>
+          <div key={index} className="col-span-6 sm:col-span-3 lg:col-span-2">
+            {component(item)}
+          </div>
         ))}
       </div>
 
       {/*~~~~~~~~$ Pagination Controls $~~~~~~~~*/}
       <div className="pagination-controls flex items-center justify-center space-x-2 mt-8">
-        <button
+        <Button
           onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
           className="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 transition-colors"
         >
-          Previous
-        </button>
+          <IconContainer>
+            <Arrow className="scale-100"/>
+          </IconContainer>
+        </Button>
         {visiblePageNumbers.map((page, index) => (
           <div key={index}>
             {page === "..." ? (
@@ -94,7 +101,7 @@ const Pagination = <T,>({
                 animate={{ opacity: currentPage === page ? 1 : 0.5 }}
                 transition={{ duration: 0.3 }}
               >
-                <button
+                <Button
                   onClick={() => handlePageChange(page as number)}
                   className={`px-3 py-1 rounded-full ${
                     currentPage === page
@@ -103,19 +110,21 @@ const Pagination = <T,>({
                   } hover:bg-blue-400 hover:text-white transition-colors`}
                 >
                   {page}
-                </button>
+                </Button>
               </motion.div>
             )}
           </div>
         ))}
-        <button
+        <Button
           onClick={() =>
             currentPage < totalPages && handlePageChange(currentPage + 1)
           }
           className="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 transition-colors"
         >
-          Next
-        </button>
+          <IconContainer>
+            <Arrow className="scale-100 rotate-180" />
+          </IconContainer>
+        </Button>
       </div>
     </div>
   );
