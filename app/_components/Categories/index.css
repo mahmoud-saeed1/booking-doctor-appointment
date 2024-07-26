@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .categories__contianer {
-    @apply grid grid-cols-6 gap-4 items-center justify-center xl:gap-10;
+    @apply grid grid-cols-6 gap-4 items-center justify-center md:px-[4.5rem] ;
 }
 
 .category__card {
-    @apply bg-blue-50 sm:bg-green-500 md:bg-red-400 h-24 p-10 col-span-2 flex flex-col items-center justify-center space-y-2 rounded-xl sm:h-32 sm:space-y-4 md:h-40 lg:col-span-1 xl:h-32;
+    @apply bg-blue-50 h-24 p-10 col-span-2 flex flex-col items-center justify-center space-y-2 rounded-xl sm:h-32 sm:space-y-4 md:h-40 lg:col-span-1 xl:h-32;
 }
 
 .category__card p {

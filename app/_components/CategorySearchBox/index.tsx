@@ -11,7 +11,7 @@ const CategorySearchBox = () => {
         search <span>doctors</span>
       </h2>
 
-      <h3>search your doctor and book appointment in one click</h3>
+      <p>search your doctor and book appointment in one click</p>
 
       <div className="search__box">
         <Input placeholder="search..." className="search__input" />

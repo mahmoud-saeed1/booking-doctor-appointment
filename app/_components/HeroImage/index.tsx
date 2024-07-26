@@ -6,7 +6,7 @@ import "./index.css";
 
 const HeroImage: React.FC<IHeroImageProps> = ({ imageSrc, altText }) => (
   <motion.div
-    className="hero-image-container bg-green-500"
+    className="hero-image-container"
     initial="hidden"
     animate="visible"
     exit="hidden"
@@ -15,7 +15,6 @@ const HeroImage: React.FC<IHeroImageProps> = ({ imageSrc, altText }) => (
     <Image
       src={imageSrc}
       alt={altText}
-      className="bg-yellow-300"
       layout="fill"
       objectFit="cover"
       priority
