@@ -7,11 +7,11 @@
 }
 
 .image__container--outer{
-  @apply absolute w-32 h-32 left-1/2 -top-[19%] -translate-x-1/2 bg-white rounded-full ring-blue-900 ring-2 flex items-center justify-center overflow-hidden
+  @apply absolute w-32 h-32 left-1/2 -top-[19%] -translate-x-1/2 bg-white rounded-full ring-blue-900 ring-2 flex items-center justify-center overflow-hidden sm:w-[10.5rem] sm:h-[10.5rem] sm:-top-[25%]
 }
 
 .image__container--inner{
-  @apply bg-primary w-[6.5rem] h-[6.5rem] rounded-full overflow-hidden
+  @apply bg-primary w-[6.5rem] h-[6.5rem] rounded-full overflow-hidden sm:w-36 sm:h-36
 }
 
 .doctor__card img{

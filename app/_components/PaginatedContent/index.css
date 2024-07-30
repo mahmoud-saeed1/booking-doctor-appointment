@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.paginated-content {
+  @apply mt-40 grid grid-cols-6 gap-y-28 gap-x-0 place-items-center sm:gap-x-14 xl:gap-y-40;
+}
+
+.paginated-content__item {
+  @apply col-span-6 sm:col-span-3 lg:col-span-2;
+}

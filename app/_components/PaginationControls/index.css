@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-.pagination-controls{
-    @apply p-4 flex items-center justify-between;
+.pagination-controls {
+  @apply flex items-center justify-center space-x-3 mt-16;
+}
+
+.pagination-controls__button {
+  @apply bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 transition-colors;
+}
+
+.pagination-controls__ellipsis {
+  @apply bg-gray-300 text-gray-700 rounded-full px-3 py-1;
+}
+
+.pagination-controls__button{
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 50% !important;
 }

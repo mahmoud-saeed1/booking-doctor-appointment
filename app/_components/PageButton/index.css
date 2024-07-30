@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page-button {
+    @apply px-3 py-1 rounded-full transition-colors;
+  }
+  
+  .page-button--active {
+    @apply bg-blue-500 text-white;
+  }
+  
+  .page-button--inactive {
+    @apply bg-gray-100 text-white;
+  }
+  
+  .page-button:hover {
+    @apply bg-blue-400 text-white;
+  }
+  
+
+  .page-button{
+    width: 2rem !important;
+    height: 2rem !important;
+    border-radius: 50% !important;
+    color: #fff !important;
+  }

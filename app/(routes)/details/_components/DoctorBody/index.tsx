@@ -3,8 +3,8 @@ import ContactInfo from "../ContactInfo";
 import { IDoctorData } from "@/app/_interfaces";
 import { CategoriesIcons } from "@/app/_data";
 import AppointmentDialog from "../AppointmentDialog";
-import "./index.css";
 import Socials from "@/app/_components/Socials";
+import "./index.css";
 
 /*~~~~~~~~$ DoctorBody Component $~~~~~~~~*/
 const DoctorBody = ({ doctorData }: { doctorData: IDoctorData }) => {
