@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import NavLinks from "../NavLinks";
+import MobileMenu from "../MobileMenu";
 import "./index.css";
 
 const Header = () => {
   return (
     <header className="header__container container">
-      <Image src={"/Logo.svg"} alt="Logo" width={180} height={80} />
+      <Image src={"/Logo.svg"} alt="Logo" width={180} height={80} priority/>
       <NavLinks className="hidden md:flex" />
-      <Button>get started</Button>
+      <MobileMenu />
     </header>
   );
 };

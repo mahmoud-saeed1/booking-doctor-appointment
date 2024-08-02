@@ -1,5 +1,7 @@
 import React from "react";
 import Socials from "../Socials";
+import { DoctorsSpecialties, LinksData } from "@/app/_data";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -15,64 +17,23 @@ const Footer = () => {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
               cupiditate quae nam molestias.
             </p>
-
-            
           </div>
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             <div>
-              <p className="font-medium text-gray-900">Services</p>
+              <p className="font-medium text-gray-900">Specialties</p>
 
               <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    1on1 Coaching{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Company Review{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Accounts Review{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    HR Consulting{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    SEO Optimisation{" "}
-                  </a>
-                </li>
+                {DoctorsSpecialties.map((specialties) => (
+                  <li key={specialties.id}>
+                    <Link
+                      href={"search/" + specialties.specialty}
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      {specialties.specialty}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -116,35 +77,16 @@ const Footer = () => {
               <p className="font-medium text-gray-900">Helpful Links</p>
 
               <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Contact{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    FAQs{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Live Chat{" "}
-                  </a>
-                </li>
+                {LinksData.map((link) => (
+                  <li key={link.id}>
+                    <Link
+                      href={link.path}
+                      className="text-gray-700 capitalize transition hover:opacity-75"
+                    >
+                      {link.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -195,10 +137,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        <p className="text-xs text-gray-500">
-          &copy; 2022. Company Name. All rights reserved.
-        </p>
       </div>
     </footer>
   );

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-nav ul{
+.links-container{
     @apply items-center justify-center space-x-8
 }
 

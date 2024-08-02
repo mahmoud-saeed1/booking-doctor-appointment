@@ -7,6 +7,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import "./index.css";
+import AppointmentForm from "../AppointmentForm";
 
 /*~~~~~~~~$ AppointmentDialog Component $~~~~~~~~*/
 const AppointmentDialog = () => {
@@ -16,16 +17,18 @@ const AppointmentDialog = () => {
         className="appointment-dialog__trigger"
         style={{ borderRadius: "0.5rem" }}
       >
-        book appointment
+        Book Appointment
       </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Are you absolutely sure?</DialogTitle>
-          <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+      <DialogContent className="bg-white h-[80%] w-[92%] rounded-2xl overflow-x-hidden overflow-y-scroll scrollbar-none scroll-smooth lg:scrollbar-thin lg:scrollbar-thumb-blue-600 lg:scrollbar-track-blue-200">
+        <DialogHeader className="mt-10">
+          <DialogTitle className="text-primary font-bold tracking-wider text-3xl whitespace-nowrap">
+            Book an Appointment
+          </DialogTitle>
+          <DialogDescription className="text-gray-500 font-semibold tracking-wide">
+            Please fill out the form below to book an appointment.
           </DialogDescription>
         </DialogHeader>
+        <AppointmentForm />
       </DialogContent>
     </Dialog>
   );

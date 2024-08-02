@@ -1,5 +1,24 @@
 import { IIcon } from "../_interfaces";
 
+export const MenuHamburger: React.FC<IIcon> = ({ className = "", ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={800}
+    height={800}
+    fill="none"
+    viewBox="0 0 24 24"
+    className={`${className} w-full h-full`}
+    {...rest}
+  >
+    <path
+      fill="#1d4ed8"
+      fillRule="evenodd"
+      d="M7.25 1.25a6 6 0 0 0-6 6v9.5a6 6 0 0 0 6 6h9.5a6 6 0 0 0 6-6v-9.5a6 6 0 0 0-6-6h-9.5ZM4.846 7c-.33 0-.596.336-.596.75s.267.75.596.75h14.308c.33 0 .596-.336.596-.75S19.483 7 19.154 7H4.846Zm-.596 5.25c0-.414.267-.75.596-.75h14.308c.33 0 .596.336.596.75s-.267.75-.596.75H4.846c-.33 0-.596-.336-.596-.75ZM4.846 16c-.33 0-.596.336-.596.75s.267.75.596.75h14.308c.33 0 .596-.336.596-.75s-.267-.75-.596-.75H4.846Z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
 export const Arrow: React.FC<IIcon> = ({ className = "", ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

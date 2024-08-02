@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .hero-navigation-container {
-  @apply absolute left-1/2 transform -translate-x-1/2 flex flex-col space-y-2 z-30;
+  @apply absolute left-1/2 transform -translate-x-1/2 hidden md:flex md:flex-col md:space-y-2 z-30;
 }
 
 .hero-nav-button {

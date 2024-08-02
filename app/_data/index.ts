@@ -1,4 +1,9 @@
-import { IDoctorData, IHeroSlidesData, ILinks } from "../_interfaces";
+import {
+  IDoctorData,
+  IHeroSlidesData,
+  ILinks,
+  Specialty,
+} from "../_interfaces";
 import { v4 as uuid } from "uuid";
 import { Bones, Brain, Dentist, Doctor, Ear, Heart } from "@/app/_icons";
 
@@ -14,21 +19,21 @@ export const CategoriesIcons = [
 export const HeroSlidesData: IHeroSlidesData[] = [
   {
     id: uuid(),
-    image: "/doctors.webp",
+    image: require("/public/heroSlides/slide1.webp"),
     heading: "Find and Book Your Appointments with Ease",
     paragraph:
       "Our platform provides a seamless way to find and book appointments with healthcare professionals. Whether you need a general check-up or a specialist consultation, we have got you covered with just a few clicks.",
   },
   {
     id: uuid(),
-    image: "/doctors1.webp",
+    image: require("/public/heroSlides/slide2.webp"),
     heading: "Your Health, Our Priority",
     paragraph:
       "We prioritize your health and well-being by connecting you with experienced doctors and specialists. Our commitment is to ensure you receive the best possible care at your convenience.",
   },
   {
     id: uuid(),
-    image: "/doctors.webp",
+    image: require("/public/heroSlides/slide3.webp"),
     heading: "Quality Care for Everyone",
     paragraph:
       "We believe in providing quality healthcare for everyone. Our services are designed to be accessible and affordable, ensuring that you get the care you deserve, regardless of your circumstances.",
@@ -37,8 +42,8 @@ export const HeroSlidesData: IHeroSlidesData[] = [
 
 export const LinksData: ILinks[] = [
   { id: uuid(), title: "home", path: "/" },
-  { id: uuid(), title: "explore", path: "/explore" },
-  { id: uuid(), title: "contace us", path: "/contace" },
+  { id: uuid(), title: "explore doctors", path: "/search/dentist" },
+  { id: uuid(), title: "appointments", path: "/appointments" },
 ];
 
 export const DoctorsData: IDoctorData[] = [
@@ -924,3 +929,12 @@ export const EmbtyDoctorObj = {
   publishedAt: new Date("2023-11-22T09:17:28.432Z"),
   updatedAt: new Date("2023-11-23T12:45:30.987Z"),
 };
+
+export const DoctorsSpecialties: Specialty[] = [
+  { id: 1, specialty: "dentist" },
+  { id: 2, specialty: "cardiologist" },
+  { id: 3, specialty: "orthopedic" },
+  { id: 4, specialty: "neurologist" },
+  { id: 5, specialty: "otology" },
+  { id: 6, specialty: "general" },
+];

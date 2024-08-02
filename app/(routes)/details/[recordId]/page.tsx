@@ -15,18 +15,47 @@ const Details = ({ params }: { params: { recordId: string } }) => {
 
   /*~~~~~~~~$ Effects $~~~~~~~~*/
   useEffect(() => {
-    const doctorData = DoctorsData.find(
+    // Check session storage for doctor data
+    const storedDoctorData = sessionStorage.getItem('doctorData');
+    const storedSuggestedDoctors = sessionStorage.getItem('suggestedDoctors');
+
+    if (storedDoctorData && storedSuggestedDoctors) {
+      try {
+        const parsedDoctorData = JSON.parse(storedDoctorData) as IDoctorData;
+        const parsedSuggestedDoctors = JSON.parse(storedSuggestedDoctors) as IDoctorData[];
+
+        // Verify that parsedDoctorData corresponds to the current recordId
+        if (parsedDoctorData.id === params.recordId) {
+          setDoctorData(parsedDoctorData);
+          setSuggestedDoctors(parsedSuggestedDoctors);
+          return; // Exit early if data is valid
+        }
+      } catch (error) {
+        console.error("Failed to parse session storage data", error);
+      }
+    }
+
+    // Fetch data if not found in session storage or invalid
+    const fetchedDoctorData = DoctorsData.find(
       (doctor: IDoctorData) => doctor.id === params.recordId
     );
-    setDoctorData(doctorData || null);
+    setDoctorData(fetchedDoctorData || null);
 
     // Get doctors with the same specialization
     const sameSpecializationDoctors = DoctorsData.filter(
       (doctor: IDoctorData) =>
-        doctor.specialty === doctorData?.specialty &&
-        doctor.id !== params.recordId
+        doctor.specialty === fetchedDoctorData?.specialty &&
+        doctor.id !== params.recordId &&
+        doctor.image !== fetchedDoctorData?.image
     );
     setSuggestedDoctors(sameSpecializationDoctors);
+
+    // Save data to session storage
+    if (fetchedDoctorData) {
+      sessionStorage.setItem('doctorData', JSON.stringify(fetchedDoctorData));
+    }
+    sessionStorage.setItem('suggestedDoctors', JSON.stringify(sameSpecializationDoctors));
+
   }, [params.recordId]);
 
   /*~~~~~~~~$ Render $~~~~~~~~*/

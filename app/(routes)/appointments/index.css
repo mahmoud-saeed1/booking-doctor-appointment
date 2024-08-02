@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.appointment-list {
+    @apply max-w-7xl mx-auto p-4;
+  }
+  
+  .appointment-list__title {
+    @apply text-2xl font-bold mb-4;
+  }
+  
+  .appointment-list__table-container {
+    @apply overflow-x-auto;
+  }
+  
+  .appointment-list__table {
+    @apply min-w-full bg-white shadow-md rounded-lg;
+  }
+  
+  .appointment-list__table th,
+  .appointment-list__table td {
+    @apply border px-4 py-2 text-left;
+  }
+  
+  .appointment-list__table th {
+    @apply bg-blue-200 font-bold;
+  }
+  
+  .appointment-list__row:nth-child(even) {
+    @apply bg-blue-50;
+  }
+  

@@ -5,14 +5,14 @@
 .category__search {
     @apply my-10 text-center;
   }
-  h2 {
+  .category__search h2 {
     @apply text-4xl capitalize font-bold;
   }
-  h2 span {
+ .category__search h2 span {
     @apply text-primary;
   }
   
-  p {
+ .category__search p {
     @apply text-gray-600;
   }
   

@@ -6,3 +6,28 @@
     @apply bg-primary px-4 py-2 rounded-lg text-white mt-4 text-lg font-bold tracking-wider capitalize hover:bg-transparent hover:ring-2 hover:ring-primary hover:text-primary hover:tracking-widest transition-all duration-200 ease-in-out;
   }
   
+  /* Custom styles for the appointment dialog */
+.appointment-dialog__trigger {
+  padding: 8px 16px;
+  background-color: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+.time-slot-btn {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.time-slot-btn.selected {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.time-slot-btn:hover {
+  background-color: #6366f1;
+  color: white;
+}

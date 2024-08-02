@@ -35,6 +35,23 @@ export interface IIconsContainer {
   children?: ReactNode;
 }
 
+// export interface IDoctorData {
+//   id: string;
+//   about: string;
+//   address: string;
+//   endTime: string;
+//   name: string;
+//   patients: string;
+//   phone: string;
+//   startTime: string;
+//   premiumTime: string | null;
+//   yearsOfExperience: number;
+//   specialty: TSpecialty;
+//   createdAt: Date;
+//   image: string;
+//   publishedAt: Date;
+//   updatedAt: Date;
+// }
 export interface IDoctorData {
   id: string;
   about: string;
@@ -51,6 +68,33 @@ export interface IDoctorData {
   image: string;
   publishedAt: Date;
   updatedAt: Date;
+}
+
+export interface IFormData {
+  doctorId: string;
+  doctorName: string; 
+  doctorSpecialty: string; 
+  name: string;
+  age: string;
+  gender: string;
+  address: string;
+  phone: string;
+  whatsapp: string;
+  date: Date;
+  timeSlot: string;
+}
+
+
+export interface IErrors {
+  doctorId: string;
+  name: string;
+  age: string;
+  gender: string;
+  address: string;
+  phone: string;
+  whatsapp: string;
+  date: string;
+  timeSlot: string;
 }
 
 export interface IDoctorCard {
@@ -102,4 +146,23 @@ export interface ISectionTilel {
   className?: string;
   title: string;
   children?: ReactNode;
+}
+
+export interface IAppointment {
+  doctorId: string;
+  doctorName: string;
+  doctorSpecialty: string;
+  name: string;
+  age: string;
+  gender: string;
+  address: string;
+  phone: string;
+  whatsapp: string;
+  date: Date;
+  timeSlot: string;
+}
+
+export interface Specialty {
+  id: number;
+  specialty: TSpecialty;
 }

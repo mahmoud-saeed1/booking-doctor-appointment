@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Arrow } from "@/app/_icons";
 import IconContainer from "../IconContainer";
-import "./index.css";
 import { IHeroNavigationProps } from "@/app/_interfaces";
+import "./index.css";
 
 const HeroNavigation: React.FC<IHeroNavigationProps> = ({ onPrev, onNext }) => (
-  <div className="hero-navigation-container hidden md:flex">
+  <div className="hero-navigation-container">
     <Button onClick={onPrev} className="hero-nav-button">
       <IconContainer>
         <Arrow />

@@ -15,7 +15,7 @@ const NavLinks = ({ className }: { className?: string }) => {
 
   return (
     <nav>
-      <ul className={`${className}`}>{navLinksRendering}</ul>
+      <ul className={`${className} links-container`}>{navLinksRendering}</ul>
     </nav>
   );
 };
