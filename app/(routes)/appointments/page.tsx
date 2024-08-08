@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Appointment from "./_components/Appointment";
 import { Button } from "@/components/ui/button";
 import DeleteConfirmationDialog from "./_components/DeleteConfirmationDialog";
+import EmptyState from "@/app/_components/EmptyState";
 
 /*~~~~~~~~$ AppointmentList Component $~~~~~~~~*/
 const AppointmentList: React.FC = () => {
@@ -37,8 +38,17 @@ const AppointmentList: React.FC = () => {
     setAppointments([]);
   };
 
+  /*~~~~~~~~$ Render Empty State $~~~~~~~~*/
   if (appointments.length === 0) {
-    return <p className="no-appointments">No appointments found.</p>;
+    return (
+      <EmptyState
+        message="You have no appointments scheduled."
+        buttonLabel="Add Appointment"
+        onButtonClick={() => {
+          /* Handle redirect to add appointment page */
+        }}
+      />
+    );
   }
 
   return (
