@@ -1,3 +1,5 @@
+"use client";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -10,9 +12,14 @@ import "./index.css";
 import AppointmentForm from "../AppointmentForm";
 
 /*~~~~~~~~$ AppointmentDialog Component $~~~~~~~~*/
-const AppointmentDialog = () => {
+const AppointmentDialog = ({ doctorID }: { doctorID: string }) => {
+  const [open, setOpen] = useState(false);
+
+  /*~~~~~~~~$ Handlers $~~~~~~~~*/
+  const closeDialogHandler = () => setOpen(false);
+
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger
         className="appointment-dialog__trigger"
         style={{ borderRadius: "0.5rem" }}
@@ -28,7 +35,7 @@ const AppointmentDialog = () => {
             Please fill out the form below to book an appointment.
           </DialogDescription>
         </DialogHeader>
-        <AppointmentForm />
+        <AppointmentForm doctorID={doctorID} closeDialog={closeDialogHandler} />
       </DialogContent>
     </Dialog>
   );

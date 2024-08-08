@@ -29,7 +29,7 @@ const DoctorBody = ({ doctorData }: { doctorData: IDoctorData }) => {
       {/* socials */}
       <Socials />
       {/* appointment */}
-      <AppointmentDialog />
+      <AppointmentDialog doctorID={doctorData.id} />
     </div>
   );
 };

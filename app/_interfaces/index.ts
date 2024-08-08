@@ -72,8 +72,6 @@ export interface IDoctorData {
 
 export interface IFormData {
   doctorId: string;
-  doctorName: string; 
-  doctorSpecialty: string; 
   name: string;
   age: string;
   gender: string;
@@ -86,7 +84,6 @@ export interface IFormData {
 
 
 export interface IErrors {
-  doctorId: string;
   name: string;
   age: string;
   gender: string;
@@ -165,4 +162,9 @@ export interface IAppointment {
 export interface Specialty {
   id: number;
   specialty: TSpecialty;
+}
+
+export interface ISearch {
+  searchTerm: string;
+  setSearchTermHandler: (searchTerm: string) => void;
 }

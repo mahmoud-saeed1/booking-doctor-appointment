@@ -27,9 +27,9 @@ const HeroContent: React.FC<IHeroContentProps> = ({ heading, paragraph }) => {
         custom={0}
         variants={contentVariants}
       >
-        <h1 className="text-4xl md:text-6xl font-bold">{headerRender}</h1>
+        <h1 className="hero-title">{headerRender}</h1>
         <motion.p
-          className="text-lg md:text-2xl text-black"
+          className="hero-paragraph"
           custom={1}
           variants={contentVariants}
         >

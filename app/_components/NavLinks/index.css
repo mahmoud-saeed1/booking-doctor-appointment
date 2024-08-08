@@ -3,9 +3,51 @@
 @tailwind utilities;
 
 .links-container{
-    @apply items-center justify-center space-x-8
+    @apply items-center justify-center
 }
 
 .nav__link{
     @apply uppercase hover:text-blue-700 hover:scale-110 transition-all ease-in-out
 }
+
+/* index.css */
+.links-container {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav__link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .nav__link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    border-radius: .3rem;
+    background-color: #0070f3;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav__link:hover::before {
+    width: 100%;
+    left: 0;
+  }
+  
+  .nav__link:hover {
+    color: #0070f3;
+  }
+  
+  .nav__link.active {
+    background-color: #0070f3;
+    color: white;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  

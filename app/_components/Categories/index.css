@@ -7,11 +7,11 @@
 }
 
 .category__card {
-    @apply bg-blue-50 h-24 p-10 col-span-2 flex flex-col items-center justify-center space-y-2 rounded-[0.5rem] sm:h-32 sm:space-y-4 md:h-40 lg:col-span-1 xl:h-32;
+    @apply bg-blue-50 h-24 p-10 col-span-2 flex flex-col items-center justify-center space-y-2 rounded-[0.5rem] hover:scale-110 duration-300 transition-all ease-in-out sm:h-32 sm:space-y-4 md:h-40 lg:col-span-1 xl:h-32;
 }
 
 .category__card p {
-    @apply text-blue-700 text-center text-sm font-bold capitalize sm:text-xl sm:tracking-wider md:text-2xl lg:text-xl;
+    @apply text-primary text-center text-sm font-bold capitalize sm:text-xl sm:tracking-wider md:text-2xl lg:text-xl;
 }
 
 .icon__container--category {

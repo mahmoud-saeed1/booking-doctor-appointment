@@ -1,13 +1,13 @@
 import { IFormData, IErrors } from "@/app/_interfaces";
 
-const nameRegex =  /^\s*([\u0600-\u06FF\u0750-\u077F\uFB50-\uFBC1a-zA-Z]+(\s+[\u0600-\u06FF\u0750-\u077F\uFB50-\uFBC1a-zA-Z]+)*)?$/;
+const nameRegex =
+  /^\s*([\u0600-\u06FF\u0750-\u077F\uFB50-\uFBC1a-zA-Z]+(\s+[\u0600-\u06FF\u0750-\u077F\uFB50-\uFBC1a-zA-Z]+)*)?$/;
 const phoneRegex = /^(012|015|010)\d{8}$/;
-const addressRegex =  /^[#.0-9a-zA-Z\u0600-\u06FF\s,-]+$/;
+const addressRegex = /^[#.0-9a-zA-Z\u0600-\u06FF\s,-]+$/;
 const ageRegex = /^\d{1,2}$/;
 
 export const validateForm = (formData: IFormData): IErrors => {
   const errors: IErrors = {
-    doctorId: "", 
     name: "",
     age: "",
     gender: "",
@@ -17,8 +17,6 @@ export const validateForm = (formData: IFormData): IErrors => {
     date: "",
     timeSlot: "",
   };
-
-  if (!formData.doctorId) errors.doctorId = "Doctor selection is required"; 
 
   // Name validation
   if (!formData.name) {
@@ -30,7 +28,11 @@ export const validateForm = (formData: IFormData): IErrors => {
   // Age validation
   if (!formData.age) {
     errors.age = "Age is required";
-  } else if (!ageRegex.test(formData.age) || parseInt(formData.age, 10) < 0 || parseInt(formData.age, 10) > 99) {
+  } else if (
+    !ageRegex.test(formData.age) ||
+    parseInt(formData.age, 10) < 0 ||
+    parseInt(formData.age, 10) > 99
+  ) {
     errors.age = "Age must be a number between 0 and 99";
   }
 

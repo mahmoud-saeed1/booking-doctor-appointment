@@ -6,14 +6,18 @@ import FormField from "../../_ui/FormField";
 import FormRadioGroup from "../../_ui/FormRadioGroup";
 import CalendarField from "../../_ui/CalendarField";
 import FormButton from "../../_ui/FormButton";
-import { IDoctorData, IErrors, IFormData } from "@/app/_interfaces";
+import { IErrors, IFormData } from "@/app/_interfaces";
 
-const AppointmentForm: React.FC = () => {
+const AppointmentForm = ({
+  doctorID,
+  closeDialog,
+}: {
+  doctorID: string;
+  closeDialog: () => void;
+}) => {
   /*~~~~~~~~$ States $~~~~~~~~*/
   const [formData, setFormData] = useState<IFormData>({
-    doctorId: "",
-    doctorName: "", 
-    doctorSpecialty: "", 
+    doctorId: doctorID,
     name: "",
     age: "",
     gender: "",
@@ -25,7 +29,6 @@ const AppointmentForm: React.FC = () => {
   });
 
   const [errors, setErrors] = useState<IErrors>({
-    doctorId: "",
     name: "",
     age: "",
     gender: "",
@@ -43,7 +46,7 @@ const AppointmentForm: React.FC = () => {
     const { name, value } = event.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
 
-    // Clear the specific error when input changes
+    //? Clear the specific error when input changes
     setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
   };
 
@@ -61,8 +64,8 @@ const AppointmentForm: React.FC = () => {
     if (Object.values(validationErrors).some((error) => error !== "")) {
       return;
     }
-    
-    // Save appointment data to local storage
+
+    //? Save appointment data to local storage
     const doctor = DoctorsData.find((d) => d.id === formData.doctorId);
     const appointmentData = {
       ...formData,
@@ -78,10 +81,9 @@ const AppointmentForm: React.FC = () => {
       JSON.stringify([...storedAppointments, appointmentData])
     );
 
+    // Clear form data
     setFormData({
       doctorId: "",
-      doctorName: "", 
-      doctorSpecialty: "", 
       name: "",
       age: "",
       gender: "",
@@ -93,7 +95,6 @@ const AppointmentForm: React.FC = () => {
     });
 
     setErrors({
-      doctorId: "",
       name: "",
       age: "",
       gender: "",
@@ -103,22 +104,15 @@ const AppointmentForm: React.FC = () => {
       date: "",
       timeSlot: "",
     });
+
+    closeDialog();
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-8 bg-white shadow-lg rounded-lg flex flex-col space-y-4">
-      <FormSelect
-        id="doctorId"
-        name="doctorId"
-        label="Select Doctor"
-        value={formData.doctorId}
-        onChange={handleChange}
-        options={DoctorsData.map((doctor: IDoctorData) => ({
-          value: doctor.id,
-          label: `${doctor.name} (${doctor.specialty})`,
-        }))}
-        error={errors.doctorId}
-      />
+    <form
+      onSubmit={handleSubmit}
+      className="p-8 bg-white shadow-lg rounded-lg flex flex-col space-y-4"
+    >
       <FormField
         id="name"
         name="name"

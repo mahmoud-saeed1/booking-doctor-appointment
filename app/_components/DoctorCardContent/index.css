@@ -7,7 +7,7 @@
 }
 
 .card__content h3 {
-  @apply text-xl text-black text-center font-bold tracking-wider whitespace-nowrap;
+  @apply mt-3 text-xl text-black text-center font-bold tracking-wider whitespace-nowrap;
 }
 
 .card__content p {
