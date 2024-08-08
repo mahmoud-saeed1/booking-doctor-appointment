@@ -71,6 +71,7 @@ export interface IDoctorData {
 }
 
 export interface IFormData {
+  id:string;
   doctorId: string;
   name: string;
   age: string;
@@ -146,6 +147,7 @@ export interface ISectionTilel {
 }
 
 export interface IAppointment {
+  id:string,
   doctorId: string;
   doctorName: string;
   doctorSpecialty: string;
@@ -167,4 +169,10 @@ export interface Specialty {
 export interface ISearch {
   searchTerm: string;
   setSearchTermHandler: (searchTerm: string) => void;
+}
+
+export interface IAppointment {
+  appointment: IAppointment;
+  onDelete?: (id: string) => void;
+  onUpdate?: (appointment: IAppointment) => void;
 }

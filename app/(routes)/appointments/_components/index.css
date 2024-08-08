@@ -1,0 +1,78 @@
+/*~~~~~~~~$ Styling for Appointment Components $~~~~~~~~*/
+
+.appointment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .appointment-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment-card__header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .appointment-card__doctor-image {
+    border-radius: 50%;
+  }
+  
+  .appointment-card__doctor-info {
+    flex-grow: 1;
+  }
+  
+  .appointment-card__doctor-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .appointment-card__doctor-specialty {
+    color: #777;
+  }
+  
+  .appointment-card__info {
+    margin-top: 1rem;
+  }
+  
+  .appointment-card__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-update {
+    background: #007bff;
+    color: white;
+  }
+  
+  .btn-delete {
+    background: #dc3545;
+    color: white;
+  }
+  
+  .btn-confirm {
+    background: #28a745;
+    color: white;
+  }
+  
+  .no-appointments {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #777;
+  }
+  

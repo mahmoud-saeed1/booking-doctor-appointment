@@ -16,7 +16,7 @@ const AppointmentDialog = ({ doctorID }: { doctorID: string }) => {
   const [open, setOpen] = useState(false);
 
   /*~~~~~~~~$ Handlers $~~~~~~~~*/
-  const closeDialogHandler = () => setOpen(false);
+  const closeFormHandler = () => setOpen(false);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -35,7 +35,7 @@ const AppointmentDialog = ({ doctorID }: { doctorID: string }) => {
             Please fill out the form below to book an appointment.
           </DialogDescription>
         </DialogHeader>
-        <AppointmentForm doctorID={doctorID} closeDialog={closeDialogHandler} />
+        <AppointmentForm doctorID={doctorID} closeFormHandler={closeFormHandler} />
       </DialogContent>
     </Dialog>
   );

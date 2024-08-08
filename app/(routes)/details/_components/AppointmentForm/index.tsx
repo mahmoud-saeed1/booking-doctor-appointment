@@ -7,16 +7,18 @@ import FormRadioGroup from "../../_ui/FormRadioGroup";
 import CalendarField from "../../_ui/CalendarField";
 import FormButton from "../../_ui/FormButton";
 import { IErrors, IFormData } from "@/app/_interfaces";
+import { v4 as uuid } from "uuid";
 
 const AppointmentForm = ({
   doctorID,
-  closeDialog,
+  closeFormHandler,
 }: {
   doctorID: string;
-  closeDialog: () => void;
+  closeFormHandler: () => void;
 }) => {
   /*~~~~~~~~$ States $~~~~~~~~*/
   const [formData, setFormData] = useState<IFormData>({
+    id: uuid(),
     doctorId: doctorID,
     name: "",
     age: "",
@@ -81,8 +83,9 @@ const AppointmentForm = ({
       JSON.stringify([...storedAppointments, appointmentData])
     );
 
-    // Clear form data
+    //? Clear form data
     setFormData({
+      id: "",
       doctorId: "",
       name: "",
       age: "",
@@ -105,7 +108,7 @@ const AppointmentForm = ({
       timeSlot: "",
     });
 
-    closeDialog();
+    closeFormHandler();
   };
 
   return (

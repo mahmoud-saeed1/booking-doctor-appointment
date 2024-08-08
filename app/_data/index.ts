@@ -912,7 +912,7 @@ export const DoctorsData: IDoctorData[] = [
   },
 ];
 
-export const EmbtyDoctorObj = {
+export const DefultDoctorObj: IDoctorData = {
   id: uuid(),
   about: "Dentist with a focus on endodontics and root canal therapy",
   address: "159 EndoCare Blvd",
