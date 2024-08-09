@@ -1,22 +1,22 @@
 import React, { ChangeEvent } from "react";
 import ErrorMessage from "../_components/ErrorMessage";
+import { FormRadioGroupProps } from "@/app/_interfaces";
 
-interface FormRadioGroupProps {
-  name: string;
-  label: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  options: { value: string; label: string }[];
-  error: string;
-}
-
-const FormRadioGroup: React.FC<FormRadioGroupProps> = ({ name, label, value, onChange, options, error }) => (
+const FormRadioGroup: React.FC<FormRadioGroupProps> = ({
+  name,
+  label,
+  value,
+  onChange,
+  options,
+  error,
+}) => (
   <div className="space-y-1">
     <label className="block text-lg font-medium">{label}</label>
     <div className="mt-1 flex space-x-4">
       {options.map((option) => (
-        <label key={option.value} className="inline-flex items-center">
+        <div key={option.value} className="inline-flex items-center">
           <input
+            id={`${name}-${option.value}`}
             type="radio"
             name={name}
             value={option.value}
@@ -24,8 +24,13 @@ const FormRadioGroup: React.FC<FormRadioGroupProps> = ({ name, label, value, onC
             onChange={onChange}
             className="form-radio text-indigo-600 focus:ring-indigo-500"
           />
-          <span className="ml-2">{option.label}</span>
-        </label>
+          <label
+            htmlFor={`${name}-${option.value}`}
+            className="ml-2"
+          >
+            {option.label}
+          </label>
+        </div>
       ))}
     </div>
     <ErrorMessage message={error} />

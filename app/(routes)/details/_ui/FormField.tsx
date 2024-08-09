@@ -1,19 +1,20 @@
 import React, { ChangeEvent } from "react";
 import ErrorMessage from "../_components/ErrorMessage";
+import { FormFieldProps } from "@/app/_interfaces";
 
-interface FormFieldProps {
-  id: string;
-  name: string;
-  label: string;
-  type: string;
-  value: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  error: string;
-}
-
-const FormField: React.FC<FormFieldProps> = ({ id, name, label, type, value, onChange, error }) => (
+const FormField: React.FC<FormFieldProps> = ({
+  id,
+  name,
+  label,
+  type,
+  value,
+  onChange,
+  error,
+}) => (
   <div className="mb-4">
-    <label htmlFor={id} className="block text-lg font-medium">{label}</label>
+    <label htmlFor={id} className="block text-lg font-medium">
+      {label}
+    </label>
     <input
       id={id}
       name={name}

@@ -13,6 +13,7 @@ import AppointmentForm from "../AppointmentForm";
 
 /*~~~~~~~~$ AppointmentDialog Component $~~~~~~~~*/
 const AppointmentDialog = ({ doctorID }: { doctorID: string }) => {
+  /*~~~~~~~~$ States $~~~~~~~~*/
   const [open, setOpen] = useState(false);
 
   /*~~~~~~~~$ Handlers $~~~~~~~~*/
@@ -35,7 +36,10 @@ const AppointmentDialog = ({ doctorID }: { doctorID: string }) => {
             Please fill out the form below to book an appointment.
           </DialogDescription>
         </DialogHeader>
-        <AppointmentForm doctorID={doctorID} closeFormHandler={closeFormHandler} />
+        <AppointmentForm
+          doctorID={doctorID}
+          closeFormHandler={closeFormHandler}
+        />
       </DialogContent>
     </Dialog>
   );

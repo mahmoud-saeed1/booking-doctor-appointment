@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { ChangeEvent, FC, ReactNode } from "react";
 import { TSpecialty } from "../types";
 
 export interface ILinks {
@@ -71,7 +71,7 @@ export interface IDoctorData {
 }
 
 export interface IFormData {
-  id:string;
+  id: string;
   doctorId: string;
   name: string;
   age: string;
@@ -82,7 +82,6 @@ export interface IFormData {
   date: Date;
   timeSlot: string;
 }
-
 
 export interface IErrors {
   name: string;
@@ -147,7 +146,7 @@ export interface ISectionTilel {
 }
 
 export interface IAppointment {
-  id:string,
+  id: string;
   doctorId: string;
   doctorName: string;
   doctorSpecialty: string;
@@ -175,4 +174,23 @@ export interface IAppointment {
   appointment: IAppointment;
   onDelete?: (id: string) => void;
   onUpdate?: (appointment: IAppointment) => void;
+}
+
+export interface FormFieldProps {
+  id: string;
+  name: string;
+  label: string;
+  type: string;
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  error: string;
+}
+
+export interface FormRadioGroupProps {
+  name: string;
+  label: string;
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  options: { value: string; label: string }[];
+  error: string;
 }

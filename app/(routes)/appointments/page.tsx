@@ -3,7 +3,6 @@ import { IAppointment, IDoctorData } from "@/app/_interfaces";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Appointment from "./_components/Appointment";
-import { Button } from "@/components/ui/button";
 import DeleteConfirmationDialog from "./_components/DeleteConfirmationDialog";
 import EmptyState from "@/app/_components/EmptyState";
 

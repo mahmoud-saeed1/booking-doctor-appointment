@@ -5,6 +5,7 @@ import {
   SheetContent,
   SheetDescription,
   SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import IconContainer from "../IconContainer";
@@ -20,20 +21,22 @@ const MobileMenu = ({ className }: { className?: string }) => {
   const closeMobileMenuHandler = () => setOpen(false);
   return (
     <div className={`${className} md:hidden`}>
-      <Sheet>
+      <Sheet open={open} onOpenChange={setOpen}>
         {/*~~~~~~~~$ Mobile Hamburger Icon $~~~~~~~~*/}
         <SheetTrigger>
           <IconContainer className="w-10 h-10">
-            <MenuHamburger />
+            <MenuHamburger aria-label="mobile menu icon" />
           </IconContainer>
         </SheetTrigger>
 
         {/*~~~~~~~~$ Mobile Menu Content $~~~~~~~~*/}
         <SheetContent className="bg-white">
           <SheetHeader className="mt-[80%] flex flex-col items-center justify-center space-y-10">
-            <SheetDescription>
-              <NavLinks className="flex flex-col items-center justify-center space-x-0 space-y-10 text-xl" closeMobileMenuHandler={closeMobileMenuHandler}/>
-            </SheetDescription>
+            <SheetTitle className="hidden">Are you absolutely sure?</SheetTitle>
+            <NavLinks
+              className="flex flex-col items-center justify-center space-x-0 space-y-10 text-xl"
+              closeMobileMenuHandler={closeMobileMenuHandler}
+            />
           </SheetHeader>
         </SheetContent>
       </Sheet>

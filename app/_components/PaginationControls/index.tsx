@@ -59,6 +59,7 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({
       <Button
         onClick={() => currentPage > 1 && onPageChange(currentPage - 1)}
         className="pagination-controls__button pagination-controls__button--prev"
+        aria-label="Previous page"
       >
         <IconContainer>
           <Arrow className="scale-100" />
@@ -88,6 +89,7 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({
           currentPage < totalPages && onPageChange(currentPage + 1)
         }
         className="pagination-controls__button pagination-controls__button--next"
+        aria-label="Next page"
       >
         <IconContainer>
           <Arrow className="scale-100 rotate-180" />
