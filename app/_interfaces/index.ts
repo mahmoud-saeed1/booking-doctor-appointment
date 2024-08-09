@@ -194,3 +194,8 @@ export interface FormRadioGroupProps {
   options: { value: string; label: string }[];
   error: string;
 }
+
+export interface ISpecialtyBoxProps {
+  specialty: string;
+  className?: string;
+}

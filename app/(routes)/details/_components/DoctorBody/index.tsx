@@ -1,34 +1,32 @@
-import IconContainer from "@/app/_components/IconContainer";
+import React from "react";
 import ContactInfo from "../ContactInfo";
-import { IDoctorData } from "@/app/_interfaces";
-import { CategoriesIcons } from "@/app/_data";
 import AppointmentDialog from "../AppointmentDialog";
 import Socials from "@/app/_components/Socials";
+import { IDoctorData } from "@/app/_interfaces";
+import SpecialtyBox from "@/app/_components/SpecialtyBox";
 import "./index.css";
 
-/*~~~~~~~~$ DoctorBody Component $~~~~~~~~*/
-const DoctorBody = ({ doctorData }: { doctorData: IDoctorData }) => {
-  const SpecialtyIcon = CategoriesIcons.find(
-    (icon) => icon.label === doctorData.specialty
-  )?.icon;
+interface IDoctorBodyProps {
+  doctorData: IDoctorData;
+}
+
+const DoctorBody = ({ doctorData }: IDoctorBodyProps) => {
   return (
     <div className="doctor-body">
-      {/* specialty box */}
-      <div className="specialty-box md:justify-start">
-        <IconContainer className="icon__container">
-          {SpecialtyIcon && <SpecialtyIcon />}
-        </IconContainer>
-        <h2>{doctorData.specialty}</h2>
-      </div>
-      {/* name */}
+      {/* Specialty Box */}
+      <SpecialtyBox
+        doctorSpecialty={doctorData.specialty}
+        className="md:justify-start"
+      />
+      {/* Doctor's Name */}
       <h2 className="doctor-body__name">{`Dr. ${doctorData.name}`}</h2>
-      {/* about */}
+      {/* About Doctor */}
       <p className="doctor-body__about">{doctorData.about}</p>
-      {/* contact */}
+      {/* Contact Info */}
       <ContactInfo doctorData={doctorData} />
-      {/* socials */}
+      {/* Social Links */}
       <Socials />
-      {/* appointment */}
+      {/* Appointment Dialog */}
       <AppointmentDialog doctorID={doctorData.id} />
     </div>
   );
