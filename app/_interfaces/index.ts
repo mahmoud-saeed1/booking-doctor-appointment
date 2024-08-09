@@ -196,6 +196,6 @@ export interface FormRadioGroupProps {
 }
 
 export interface ISpecialtyBoxProps {
-  specialty: string;
+  doctorSpecialty: string;
   className?: string;
 }

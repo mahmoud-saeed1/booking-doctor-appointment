@@ -1,10 +1,9 @@
-// DoctorCardContent.tsx
 import { FC, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { sliceText } from "@/lib/utils";
 import { IDoctorCard } from "@/app/_interfaces";
-import "./index.css";
 import SpecialtyBox from "../SpecialtyBox";
+import "./index.css";
 
 interface DoctorCardContentProps {
   doctor: IDoctorCard["doctor"];

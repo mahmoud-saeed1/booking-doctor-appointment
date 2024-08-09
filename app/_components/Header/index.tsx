@@ -5,6 +5,7 @@ import Image from "next/image";
 import NavLinks from "../NavLinks";
 import MobileMenu from "../MobileMenu";
 import "./index.css";
+import Logo from "../Logo";
 
 const Header: React.FC = () => {
   /*~~~~~$ States $~~~~~*/
@@ -54,14 +55,7 @@ const Header: React.FC = () => {
     >
       <nav className="container flex items-center justify-between py-4">
         {/*~~~~~$ Logo $~~~~~*/}
-        <Image
-          src="/Logo.svg"
-          alt="Logo"
-          width={180}
-          height={80}
-          priority
-          className="cursor-pointer"
-        />
+        <Logo />
 
         {/*~~~~~$ Navigation Links (Large Screens) $~~~~~*/}
         <NavLinks className="hidden md:flex" />

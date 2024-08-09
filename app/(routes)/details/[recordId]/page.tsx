@@ -7,13 +7,10 @@ import SuggestedDoctors from "../_components/SuggestedDoctors";
 import DoctorBody from "../_components/DoctorBody";
 import "./index.css";
 
-/*~~~~~~~~$ Details Component $~~~~~~~~*/
 const Details = ({ params }: { params: { recordId: string } }) => {
-  /*~~~~~~~~$ States $~~~~~~~~*/
   const [doctorData, setDoctorData] = useState<IDoctorData | null>(null);
   const [suggestedDoctors, setSuggestedDoctors] = useState<IDoctorData[]>([]);
 
-  /*~~~~~~~~$ Effects $~~~~~~~~*/
   useEffect(() => {
     const fetchDoctorData = () => {
       const storedDoctorData = sessionStorage.getItem("doctorData");

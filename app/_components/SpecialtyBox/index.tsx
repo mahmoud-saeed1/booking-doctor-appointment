@@ -1,13 +1,12 @@
 import React from "react";
 import IconContainer from "@/app/_components/IconContainer";
 import { CategoriesIcons } from "@/app/_data";
+import { ISpecialtyBoxProps } from "@/app/_interfaces";
 
-interface ISpecialtyBoxProps {
-  doctorSpecialty: string;
-  className?: string;
-}
-
-const SpecialtyBox = ({ doctorSpecialty, className = "" }: ISpecialtyBoxProps) => {
+const SpecialtyBox = ({
+  doctorSpecialty,
+  className = "",
+}: ISpecialtyBoxProps) => {
   const SpecialtyIcon = CategoriesIcons.find(
     (icon) => icon.label === doctorSpecialty
   )?.icon;

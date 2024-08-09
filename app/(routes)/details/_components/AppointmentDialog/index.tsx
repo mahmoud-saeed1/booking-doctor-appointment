@@ -22,7 +22,7 @@ const AppointmentDialog = ({ doctorID }: { doctorID: string }) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger
-        className="appointment-dialog__trigger"
+        className="appointment-dialog__trigger bg-primary"
         style={{ borderRadius: "0.5rem" }}
       >
         Book Appointment

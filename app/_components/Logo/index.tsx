@@ -1,11 +1,16 @@
+import IconContainer from "@/app/_components/IconContainer";
+import { AppLogo } from "@/app/_icons";
+import Link from "next/link";
 import React from "react";
-import Image from "next/image";
-import "./index.css";
 
-export const Logo = () => {
+const Logo = () => {
   return (
-    <div className="logo-container">
-      <Image src={"/Logo.svg"} alt="Logo" width={180} height={80} priority />
-    </div>
+    <Link href={"/"}>
+      <IconContainer className="w-auto h-auto">
+        <AppLogo />
+      </IconContainer>
+    </Link>
   );
 };
+
+export default Logo;

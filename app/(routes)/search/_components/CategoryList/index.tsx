@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Command,
   CommandEmpty,
@@ -13,16 +13,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./index.css";
 
-const CategoryList = () => {
+const CategoryList = ({ closeAside }: { closeAside?: () => void }) => {
   /*~~~~~~~~$ Global Variables $~~~~~~~~*/
-  const params= usePathname();
+  const params = usePathname();
   const category = params.split("/")[2];
 
   /*~~~~~~~~$ Renders $~~~~~~~~*/
   const categoryListRenderer = CategoriesIcons.map(
     ({ icon: Icon, label }, index) => (
       <CommandItem key={index} className="data-[]:">
-        <Link href={`/search/${label}`} className={`category ${label === category && "bg-blue-100"}`}>
+        <Link
+          href={`/search/${label}`}
+          className={`category ${label === category && "bg-blue-100"}`}
+          onClick={closeAside}
+        >
           <IconContainer className="icon__container--category">
             <Icon />
           </IconContainer>
