@@ -36,11 +36,14 @@ const FavoriteCart = () => {
 
   return (
     <Sheet onOpenChange={closeFavoriteCartHandler}>
-      <SheetTrigger>
+      <SheetTrigger aria-label="Open Favorite Doctors List">
+        {/*~~~~~~~~$ Favorite Icon $~~~~~~~~*/}
         <IconContainer className="w-8 h-8 md:w-10 md:h-10">
           <LockedHeard />
         </IconContainer>
       </SheetTrigger>
+
+      {/*~~~~~~~~$ Cart Content $~~~~~~~~*/}
       <SheetContent className="bg-white w-full overflow-y-scroll overflow-x-hidden scrollbar-none scroll-smooth lg:scrollbar-thin lg:scrollbar-thumb-blue-600 lg:scrollbar-track-blue-200">
         <SheetHeader>
           <div className="pt-16">

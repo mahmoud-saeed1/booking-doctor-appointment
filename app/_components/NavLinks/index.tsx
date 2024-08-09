@@ -21,6 +21,7 @@ const NavLinks = ({ className, closeMobileMenuHandler }: INavLinks) => {
         href={link.path}
         className={`nav__link ${currentPath === link.path ? "active" : ""}`}
         onClick={closeMobileMenuHandler}
+        aria-label={`Navigate to ${link.title}`}
       >
         {link.title}
       </Link>
