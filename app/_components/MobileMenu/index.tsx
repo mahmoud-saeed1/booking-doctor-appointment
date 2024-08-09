@@ -32,7 +32,7 @@ const MobileMenu = ({ className }: { className?: string }) => {
         <SheetContent className="bg-white">
           <SheetHeader className="mt-[80%] flex flex-col items-center justify-center space-y-10">
             <SheetDescription>
-              <NavLinks className="flex flex-col items-center justify-center space-x-0 space-y-10 text-3xl" closeMobileMenuHandler={closeMobileMenuHandler}/>
+              <NavLinks className="flex flex-col items-center justify-center space-x-0 space-y-10 text-xl" closeMobileMenuHandler={closeMobileMenuHandler}/>
             </SheetDescription>
           </SheetHeader>
         </SheetContent>

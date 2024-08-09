@@ -7,7 +7,7 @@
 }
 
 .nav__link{
-    @apply uppercase hover:text-blue-700 hover:scale-110 transition-all ease-in-out
+    @apply uppercase hover:text-blue-700 hover:scale-110 transition-all ease-in-out whitespace-nowrap
 }
 
 /* index.css */

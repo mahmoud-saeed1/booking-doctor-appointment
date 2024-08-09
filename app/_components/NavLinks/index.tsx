@@ -28,9 +28,7 @@ const NavLinks = ({ className, closeMobileMenuHandler }: INavLinks) => {
   ));
 
   return (
-    <nav>
-      <ul className={`${className} links-container`}>{navLinksRendering}</ul>
-    </nav>
+    <ul className={`${className} links-container`}>{navLinksRendering}</ul>
   );
 };
 

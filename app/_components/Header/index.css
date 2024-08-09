@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.header__container {
-  @apply h-20 shadow-md flex items-center justify-between;
+nav {
+  @apply h-16 flex items-center justify-between sm:h-20;
 }
