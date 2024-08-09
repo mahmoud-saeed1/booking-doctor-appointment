@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface EmptyStateProps {
   message: string;
   buttonLabel?: string;
   onButtonClick?: () => void;
+  path?: string;
+  useLinks?: boolean;
+  href?: string;
 }
 
 /*~~~~~~~~$ EmptyState Component $~~~~~~~~*/
@@ -12,6 +16,9 @@ const EmptyState: React.FC<EmptyStateProps> = ({
   message,
   buttonLabel,
   onButtonClick,
+  path = "/",
+  useLinks = false,
+  href = "#",
 }) => {
   return (
     <motion.div
@@ -42,18 +49,25 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       </motion.div>
 
       {/* Message */}
-      <p className="text-xl font-semibold text-gray-700">
-        {message}
-      </p>
+      <p className="text-xl font-semibold text-gray-700">{message}</p>
 
       {/* Optional Button */}
-      {buttonLabel && onButtonClick && (
+      {onButtonClick ? (
         <Button
           onClick={onButtonClick}
           className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-xl font-bold tracking-wider hover:bg-blue-700 transition-all ease-in-out duration-300 shadow-md"
         >
           {buttonLabel}
         </Button>
+      ) : useLinks ? (
+        <a href={href} className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-xl font-bold tracking-wider hover:bg-blue-700 transition-all ease-in-out duration-300 shadow-md">{buttonLabel}</a>
+      ) : (
+        <Link
+          href={path}
+          className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-xl font-bold tracking-wider hover:bg-blue-700 transition-all ease-in-out duration-300 shadow-md"
+        >
+          {buttonLabel}
+        </Link>
       )}
     </motion.div>
   );

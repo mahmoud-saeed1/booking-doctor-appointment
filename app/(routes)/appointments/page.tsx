@@ -44,9 +44,7 @@ const AppointmentList: React.FC = () => {
       <EmptyState
         message="You have no appointments scheduled."
         buttonLabel="Add Appointment"
-        onButtonClick={() => {
-          /* Handle redirect to add appointment page */
-        }}
+        path="/search/dentist"
       />
     );
   }
