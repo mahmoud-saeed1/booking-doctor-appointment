@@ -2,9 +2,9 @@
 
 Welcome to the Doctor Booking Appointment application! 🎉 This project allows users to book appointments with doctors across various specialties in a seamless and user-friendly way. With a beautiful design, robust functionalities, and top-notch performance, managing your health has never been easier! 🏥
 
-**Live Demo:** [https://booking-appointment-seven.vercel.app/]
+**Live Demo:** [https://booking-doctor-appointment.vercel.app/]
 
-![Doctor Booking](./public/doctor-booking.webp "Doctor Booking")
+![Doctor Booking](/public/doctor-booking.webp "Doctor Booking")
 
 ## Introduction 📜
 
@@ -46,18 +46,17 @@ This project is built using cutting-edge technologies to deliver a superior user
 - 🎨 **Tailwind CSS:** A utility-first CSS framework for rapidly building custom designs.
 - 🌟 **Framer Motion:** A production-ready motion library for React that brings animations to life.
 - 📅 **React Day Picker:** A date picker component for booking appointments.
-- 🔧 **Radix UI:** Accessible, high-quality UI components for React.
 - 🛠️ **Shadcn:** A library of customizable components that enhance the UI with unique styling.
 - 🎨 **Tailwind Scrollbar:** A plugin to create beautiful and custom scrollbars that fit the design aesthetic.
 - 💻 **TypeScript:** Enhances JavaScript with strong typing for better error prevention.
 
 ## Demo 🌐
 
-Check out the live demo of the Doctor Booking Appointment [here](https://booking-appointment-seven.vercel.app/). Explore the user-friendly interface and book your appointment with ease!
+Check out the live demo of the Doctor Booking Appointment [here](https://booking-doctor-appointment.vercel.app/). Explore the user-friendly interface and book your appointment with ease!
 
 ## Usage 🚀
 
-1. 🧪 Clone the repository: `git clone https://github.com/mahmoud-saeed1/doctor-booking.git`
+1. 🧪 Clone the repository: `git clone git@github.com:mahmoud-saeed1/booking-doctor-appointment.git`
 2. 📂 Navigate to the project directory: `cd doctor-booking`
 3. 📦 Install the dependencies: `npm install`
 4. ▶️ Start the application: `npm run dev`
