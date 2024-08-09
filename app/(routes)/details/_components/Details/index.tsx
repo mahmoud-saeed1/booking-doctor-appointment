@@ -43,8 +43,8 @@ const Details = ({ params }: { params: { recordId: string } }) => {
         <div className="details__doctor-data">
           <div className="details__content">
             <DoctorImage image={doctorData.image} name={doctorData.name} />
-            <DoctorBody doctorData={doctorData} SpecialtyIcon={SpecialtyIcon} />
-            <AppointmentDialog />
+            <DoctorBody doctorData={doctorData} />
+            <AppointmentDialog doctorID={doctorData.id} />
           </div>
         </div>
       )}
