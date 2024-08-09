@@ -35,23 +35,6 @@ export interface IIconsContainer {
   children?: ReactNode;
 }
 
-// export interface IDoctorData {
-//   id: string;
-//   about: string;
-//   address: string;
-//   endTime: string;
-//   name: string;
-//   patients: string;
-//   phone: string;
-//   startTime: string;
-//   premiumTime: string | null;
-//   yearsOfExperience: number;
-//   specialty: TSpecialty;
-//   createdAt: Date;
-//   image: string;
-//   publishedAt: Date;
-//   updatedAt: Date;
-// }
 export interface IDoctorData {
   id: string;
   about: string;
@@ -198,4 +181,15 @@ export interface FormRadioGroupProps {
 export interface ISpecialtyBoxProps {
   doctorSpecialty: string;
   className?: string;
+}
+
+export interface ISocialLink {
+  href: string;
+  ariaLabel: string;
+  Icon: FC<any>;
+}
+
+export interface ISocials {
+  className?: string;
+  socialLinksData: ISocialLink[];
 }

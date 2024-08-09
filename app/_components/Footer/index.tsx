@@ -1,6 +1,10 @@
 import React from "react";
-import { DoctorsSpecialties, LinksData } from "@/app/_data";
+import { DoctorsSpecialties, LinksData, SocialLinksData } from "@/app/_data";
 import Link from "next/link";
+import Socials from "../Socials";
+import Logo from "../Logo";
+import IconContainer from "../IconContainer";
+import { AppLogo } from "@/app/_icons";
 
 /*~~~~~~~~$ Footer Component $~~~~~~~~*/
 const Footer = () => {
@@ -11,12 +15,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           {/*~~~~~~~~$ Logo and Description Section $~~~~~~~~*/}
           <div>
-            <div className="text-teal-600">
-              <h1 className="text-2xl font-bold">Logo</h1>
-            </div>
+            <Link href={"/"}>
+              <IconContainer className="w-44 h-12">
+                <AppLogo className="w-10 h-10" />
+              </IconContainer>
+            </Link>
             <p className="mt-4 max-w-xs text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse non cupiditate quae nam molestias.
+              Easily book appointments with our top doctors and specialists.
+              Choose your preferred date, time, and doctor, and confirm your
+              booking instantly.
             </p>
+
+            <Socials socialLinksData={SocialLinksData} className="w-fit" />
           </div>
 
           {/*~~~~~~~~$ Links Section $~~~~~~~~*/}
@@ -43,13 +53,28 @@ const Footer = () => {
               <p className="font-medium text-gray-900">Company</p>
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <Link href="#" className="text-gray-700 transition hover:text-teal-600">About</Link>
+                  <Link
+                    href="#"
+                    className="text-gray-700 transition hover:text-teal-600"
+                  >
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-700 transition hover:text-teal-600">Meet the Team</Link>
+                  <Link
+                    href="#"
+                    className="text-gray-700 transition hover:text-teal-600"
+                  >
+                    Meet the Team
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-700 transition hover:text-teal-600">Accounts Review</Link>
+                  <Link
+                    href="#"
+                    className="text-gray-700 transition hover:text-teal-600"
+                  >
+                    Accounts Review
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -76,26 +101,47 @@ const Footer = () => {
               <p className="font-medium text-gray-900">Legal</p>
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <Link href="#" className="text-gray-700 transition hover:text-teal-600">Accessibility</Link>
+                  <Link
+                    href="#"
+                    className="text-gray-700 transition hover:text-teal-600"
+                  >
+                    Accessibility
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-700 transition hover:text-teal-600">Returns Policy</Link>
+                  <Link
+                    href="#"
+                    className="text-gray-700 transition hover:text-teal-600"
+                  >
+                    Returns Policy
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-700 transition hover:text-teal-600">Refund Policy</Link>
+                  <Link
+                    href="#"
+                    className="text-gray-700 transition hover:text-teal-600"
+                  >
+                    Refund Policy
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-700 transition hover:text-teal-600">Hiring Statistics</Link>
+                  <Link
+                    href="#"
+                    className="text-gray-700 transition hover:text-teal-600"
+                  >
+                    Hiring Statistics
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
-        {/*~~~~~~~~$ Footer Bottom Section $~~~~~~~~*/}
-        <div className="border-t border-gray-200 pt-8 text-center text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
-        </div>
+      </div>
+      {/*~~~~~~~~$ Footer Bottom Section $~~~~~~~~*/}
+      <div className="border-t py-5 border-gray-200 flex items-center justify-center text-sm text-gray-500">
+        <p>
+          &copy; {new Date().getFullYear()} Mahmoud Saeed. All rights reserved.
+        </p>
       </div>
     </footer>
   );

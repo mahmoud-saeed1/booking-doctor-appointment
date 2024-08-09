@@ -25,7 +25,7 @@ const MobileMenu = ({ className }: { className?: string }) => {
         {/*~~~~~~~~$ Mobile Hamburger Icon $~~~~~~~~*/}
         <SheetTrigger>
           <IconContainer className="w-10 h-10">
-            <MenuHamburger aria-label="mobile menu icon" />
+            <MenuHamburger aria-label="mobile menu icon"/>
           </IconContainer>
         </SheetTrigger>
 

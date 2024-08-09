@@ -5,6 +5,7 @@ import Socials from "@/app/_components/Socials";
 import { IDoctorData } from "@/app/_interfaces";
 import SpecialtyBox from "@/app/_components/SpecialtyBox";
 import "./index.css";
+import { SocialLinksData } from "@/app/_data";
 
 interface IDoctorBodyProps {
   doctorData: IDoctorData;
@@ -25,7 +26,7 @@ const DoctorBody = ({ doctorData }: IDoctorBodyProps) => {
       {/* Contact Info */}
       <ContactInfo doctorData={doctorData} />
       {/* Social Links */}
-      <Socials />
+      <Socials socialLinksData={SocialLinksData} />
       {/* Appointment Dialog */}
       <AppointmentDialog doctorID={doctorData.id} />
     </div>

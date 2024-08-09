@@ -58,7 +58,7 @@ const AppointmentList: React.FC = () => {
           content="Easily book appointments with our top doctors and specialists. Choose your preferred date, time, and doctor, and confirm your booking instantly. Convenient, fast, and secure online appointment scheduling."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Logobb.svg" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="appointment-list container flex flex-col space-y-10">

@@ -1,5 +1,43 @@
 import { IIcon } from "../_interfaces";
 
+export const LockedHeard: React.FC<IIcon> = ({ className = "", ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={800}
+    height={800}
+    fill="none"
+    viewBox="0 0 24 24"
+    className={`${className} w-full h-full`}
+    {...rest}
+  >
+    <path
+      fill="#1d4ed8"
+      fillRule="evenodd"
+      d="M6.25 7.29V7c0-1.809.546-3.275 1.602-4.285C8.902 1.711 10.358 1.25 12 1.25s3.098.461 4.148 1.465C17.204 3.725 17.75 5.191 17.75 7v.29C19.634 7.986 21 9.872 21 12.1c0 3.838-2.968 6.052-5.496 7.937-.262.196-.52.388-.77.578C13.8 21.328 12.9 22 12 22c-.9 0-1.8-.672-2.734-1.385a87.24 87.24 0 0 0-.77-.578C5.968 18.152 3 15.937 3 12.099c0-2.226 1.366-4.112 3.25-4.81ZM7.75 7c0-1.505.447-2.539 1.139-3.2.697-.668 1.74-1.05 3.111-1.05 1.37 0 2.414.382 3.111 1.05.692.661 1.139 1.695 1.139 3.2v.001c-1.365-.032-2.86.532-4.25 1.93C10.61 7.533 9.115 6.969 7.75 7V7ZM12 11.25a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0V12a.75.75 0 0 1 .75-.75Z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
+export const OpenedHeart: React.FC<IIcon> = ({ className = "", ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={800}
+    height={800}
+    fill="none"
+    viewBox="0 0 24 24"
+    className={`${className} w-full h-full`}
+    {...rest}
+  >
+    <path
+      fill="#1C274C"
+      fillRule="evenodd"
+      d="M7.75 7c0-1.51.438-2.547 1.11-3.208.676-.663 1.685-1.042 3.012-1.042 1.667 0 2.84.594 3.49 1.644a.75.75 0 1 0 1.276-.788c-.993-1.607-2.73-2.356-4.766-2.356-1.609 0-3.036.464-4.062 1.472C6.78 3.733 6.25 5.197 6.25 7v.29C4.366 7.986 3 9.872 3 12.1c0 3.838 2.968 6.052 5.496 7.937.262.196.52.388.77.578C10.2 21.328 11.1 22 12 22c.9 0 1.8-.672 2.734-1.385.25-.19.508-.382.77-.578 2.528-1.885 5.496-4.1 5.496-7.938 0-4.237-4.95-7.242-9-3.168C10.61 7.533 9.115 6.969 7.75 7V7ZM12 11.25a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0V12a.75.75 0 0 1 .75-.75Z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
 export const AppLogo: React.FC<IIcon> = ({ className = "", ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -51,15 +89,17 @@ export const MenuHamburger: React.FC<IIcon> = ({ className = "", ...rest }) => (
     width={800}
     height={800}
     fill="none"
+    transform="scale(-1 1)"
     viewBox="0 0 24 24"
     className={`${className} w-full h-full`}
     {...rest}
   >
     <path
-      fill="#1d4ed8"
-      fillRule="evenodd"
-      d="M7.25 1.25a6 6 0 0 0-6 6v9.5a6 6 0 0 0 6 6h9.5a6 6 0 0 0 6-6v-9.5a6 6 0 0 0-6-6h-9.5ZM4.846 7c-.33 0-.596.336-.596.75s.267.75.596.75h14.308c.33 0 .596-.336.596-.75S19.483 7 19.154 7H4.846Zm-.596 5.25c0-.414.267-.75.596-.75h14.308c.33 0 .596.336.596.75s-.267.75-.596.75H4.846c-.33 0-.596-.336-.596-.75ZM4.846 16c-.33 0-.596.336-.596.75s.267.75.596.75h14.308c.33 0 .596-.336.596-.75s-.267-.75-.596-.75H4.846Z"
-      clipRule="evenodd"
+      stroke="#1d4ed8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M5 17h8m-8-5h14M5 7h8"
     />
   </svg>
 );
@@ -70,8 +110,8 @@ export const Arrow: React.FC<IIcon> = ({ className = "", ...rest }) => (
     xmlSpace="preserve"
     width={800}
     height={800}
-    className={`${className} w-full h-full scale-150 fill-white`}
     viewBox="0 0 330 330"
+    className={`${className} w-full h-full scale-150 fill-white`}
     {...rest}
   >
     <path d="M315 150H51.213l11.894-11.894c5.858-5.858 5.858-15.355 0-21.213-5.858-5.858-15.355-5.858-21.213 0l-37.5 37.5c-5.858 5.858-5.858 15.355 0 21.213l37.5 37.5A14.954 14.954 0 0 0 52.5 217.5a14.95 14.95 0 0 0 10.607-4.394c5.858-5.858 5.858-15.355 0-21.213L51.213 180H315c8.284 0 15-6.716 15-15s-6.716-15-15-15z" />

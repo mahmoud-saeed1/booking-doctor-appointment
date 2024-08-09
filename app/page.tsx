@@ -5,7 +5,7 @@ import DoctorsList from "./_components/DoctorsList";
 import { useState } from "react";
 import Head from "next/head";
 
-const page = () => {
+const Page = () => {
   /*~~~~~~~~$ States $~~~~~~~~*/
   const [searchTerm, setSearchTerm] = useState<string>("");
 
@@ -17,10 +17,10 @@ const page = () => {
   return (
     <>
       <Head>
-        <title>Atsha | about Page</title>
+        <title>Home Page</title>
         <meta
           name="description"
-          content="Atsha about page contains main data about us and our mission and vision and our achievements"
+          content="Easily book appointments with our top doctors and specialists. Choose your preferred date, time, and doctor, and confirm your booking instantly. Convenient, fast, and secure online appointment scheduling."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Logobb.svg" />
@@ -37,4 +37,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

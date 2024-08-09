@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import NavLinks from "../NavLinks";
 import MobileMenu from "../MobileMenu";
-import "./index.css";
 import Logo from "../Logo";
+import FavoriteCart from "../FavoriteCart";
+import "./index.css";
 
 const Header: React.FC = () => {
   /*~~~~~$ States $~~~~~*/
@@ -61,7 +61,11 @@ const Header: React.FC = () => {
         <NavLinks className="hidden md:flex" />
 
         {/*~~~~~$ Mobile Menu (Small Screens) $~~~~~*/}
-        <MobileMenu className="md:hidden" />
+        <div className="flex items-center justify-center space-x-4">
+          <FavoriteCart />
+
+          <MobileMenu className="md:hidden" />
+        </div>
       </nav>
     </header>
   );

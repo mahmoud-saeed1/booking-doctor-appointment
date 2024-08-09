@@ -5,7 +5,15 @@ import {
   Specialty,
 } from "../_interfaces";
 import { v4 as uuid } from "uuid";
-import { Bones, Brain, Dentist, Doctor, Ear, Heart } from "@/app/_icons";
+import { Bones, Brain, Dentist, Doctor, Ear, FaceBook, Gmail, Heart, Instagram, TikTok, WhatsApp } from "@/app/_icons";
+
+export const SocialLinksData = [
+  { href: "#", ariaLabel: "Facebook", Icon: FaceBook },
+  { href: "#", ariaLabel: "Instagram", Icon: Instagram },
+  { href: "#", ariaLabel: "TikTok", Icon: TikTok },
+  { href: "https://wa.me/+2010", ariaLabel: "WhatsApp", Icon: WhatsApp },
+  { href: "mailto:cocos110223@gmail.com", ariaLabel: "Gmail", Icon: Gmail },
+];
 
 export const CategoriesIcons = [
   { id: uuid(), icon: Dentist, label: "dentist" },
@@ -48,7 +56,7 @@ export const LinksData: ILinks[] = [
 
 export const DoctorsData: IDoctorData[] = [
   {
-    id: uuid(),
+    id: "doctor-001",
     about: "Skilled dentist and Expert in smiles and teeth brightness",
     address: "547 Carrington Trace Drive",
     endTime: "06:00:00.000",
@@ -65,7 +73,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-10-03T15:09:19.497Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-002",
     about: "Experienced cardiologist with a focus on preventive care",
     address: "123 Heartbeat Avenue",
     endTime: "07:00:00.000",
@@ -82,7 +90,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-09-16T12:45:12.654Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-003",
     about: "Orthopedic specialist with expertise in sports-related injuries",
     address: "789 Bone Clinic Lane",
     endTime: "08:00:00.000",
@@ -99,7 +107,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-02T14:30:18.987Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-004",
     about:
       "Neurologist specializing in the treatment of migraines and chronic pain",
     address: "456 Brain Center Boulevard",
@@ -117,7 +125,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-08-21T11:25:36.987Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-005",
     about: "Skilled otologist with a focus on hearing and balance disorders",
     address: "321 Ear Clinic Road",
     endTime: "07:00:00.000",
@@ -134,7 +142,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-12-11T14:20:10.456Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-006",
     about: "General practitioner with a holistic approach to patient care",
     address: "159 Oak Tree Lane",
     endTime: "07:00:00.000",
@@ -151,7 +159,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-06-02T15:40:18.789Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-007",
     about:
       "Highly skilled dentist with a focus on cosmetic and restorative procedures",
     address: "789 Pearly Whites Way",
@@ -169,7 +177,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-16T10:30:25.678Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-008",
     about:
       "Cardiology specialist with expertise in minimally invasive procedures",
     address: "246 Heartbeat Clinic",
@@ -187,7 +195,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-09-02T16:20:30.654Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-009",
     about:
       "Orthopedic surgeon specializing in joint replacement and sports medicine",
     address: "369 Bone & Joint Clinic",
@@ -205,7 +213,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-21T13:10:45.321Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-010",
     about:
       "Neurologist specializing in the treatment of neurological disorders",
     address: "741 Brain Health Clinic",
@@ -223,7 +231,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-08-02T18:00:40.123Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-011",
     about:
       "Otologist specializing in the treatment of ear disorders and hearing loss",
     address: "963 Ear & Hearing Center",
@@ -241,7 +249,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-12-06T12:45:50.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-012",
     about: "General practitioner providing comprehensive healthcare services",
     address: "753 General Health Street",
     endTime: "07:00:00.000",
@@ -258,7 +266,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-06-11T10:35:25.678Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-013",
     about: "Experienced dentist with a focus on oral surgery and implantology",
     address: "159 Smiles & Care Lane",
     endTime: "07:00:00.000",
@@ -275,7 +283,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-26T14:40:32.765Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-014",
     about:
       "Cardiology expert with a focus on heart disease prevention and treatment",
     address: "357 Heart & Health Blvd",
@@ -293,7 +301,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-09-19T17:25:38.987Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-015",
     about: "Orthopedic specialist with a focus on pediatric orthopedics",
     address: "963 Child Bone Center",
     endTime: "08:00:00.000",
@@ -310,7 +318,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-11T13:30:28.543Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-016",
     about: "Neurologist with expertise in epilepsy and seizure disorders",
     address: "852 Neurology Center",
     endTime: "07:00:00.000",
@@ -327,7 +335,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-08-26T10:20:25.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-017",
     about: "Otologist specializing in balance disorders and vestibular therapy",
     address: "741 Balance & Hearing Clinic",
     endTime: "07:00:00.000",
@@ -344,7 +352,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-12-02T15:10:30.654Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-018",
     about:
       "General practitioner focusing on preventive care and chronic disease management",
     address: "852 General Wellness Blvd",
@@ -362,7 +370,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-06-21T12:40:22.543Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-019",
     about: "Dentist specializing in pediatric dental care and orthodontics",
     address: "951 Kids Smile Lane",
     endTime: "07:00:00.000",
@@ -379,7 +387,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-12-01T11:20:25.765Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-020",
     about: "Cardiologist specializing in heart failure and transplant medicine",
     address: "159 Heart Wellness Center",
     endTime: "07:00:00.000",
@@ -396,7 +404,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-09-26T14:50:35.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-021",
     about: "Orthopedic surgeon with expertise in trauma and fracture care",
     address: "357 Bone Trauma Clinic",
     endTime: "08:00:00.000",
@@ -413,7 +421,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-06T15:10:20.765Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-022",
     about:
       "Neurologist specializing in movement disorders and Parkinson's disease",
     address: "159 Neurology Clinic Blvd",
@@ -431,7 +439,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-08-16T16:45:28.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-023",
     about: "Otologist specializing in ear surgery and cochlear implants",
     address: "456 Hearing Health Avenue",
     endTime: "07:00:00.000",
@@ -448,7 +456,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-12-16T11:45:30.543Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-024",
     about: "General practitioner with a special interest in geriatric care",
     address: "753 Senior Health Lane",
     endTime: "07:00:00.000",
@@ -465,7 +473,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-06-06T13:15:22.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-025",
     about: "Experienced dentist with expertise in root canal treatment",
     address: "456 Dental Care Blvd",
     endTime: "07:00:00.000",
@@ -482,7 +490,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-11T11:30:32.987Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-026",
     about:
       "Cardiologist focusing on pediatric cardiology and congenital heart defects",
     address: "159 Child Heart Center",
@@ -500,7 +508,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-10-01T15:40:28.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-027",
     about: "Orthopedic specialist in spine disorders and surgeries",
     address: "951 Spine Health Blvd",
     endTime: "08:00:00.000",
@@ -517,7 +525,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-23T14:20:25.654Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-028",
     about: "Neurologist specializing in stroke care and rehabilitation",
     address: "456 NeuroCare Avenue",
     endTime: "07:00:00.000",
@@ -534,7 +542,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-08-06T10:20:32.543Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-029",
     about: "Otologist with a focus on pediatric ear disorders",
     address: "963 Pediatric Ear Clinic",
     endTime: "07:00:00.000",
@@ -551,7 +559,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-12-13T11:40:30.987Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-030",
     about: "General practitioner specializing in adolescent health",
     address: "159 Teen Health Blvd",
     endTime: "07:00:00.000",
@@ -568,7 +576,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-06-16T13:20:25.654Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-031",
     about: "Highly skilled dentist with expertise in periodontics",
     address: "753 Gum Health Lane",
     endTime: "07:00:00.000",
@@ -585,7 +593,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-06T12:50:28.543Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-032",
     about: "Cardiologist with expertise in interventional cardiology",
     address: "159 HeartCare Blvd",
     endTime: "07:00:00.000",
@@ -602,7 +610,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-09-16T15:10:28.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-033",
     about: "Orthopedic surgeon with expertise in joint replacement surgeries",
     address: "963 Joint Health Blvd",
     endTime: "08:00:00.000",
@@ -619,7 +627,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-19T15:20:25.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-034",
     about: "Neurologist specializing in neuromuscular disorders",
     address: "852 NeuroHealth Blvd",
     endTime: "07:00:00.000",
@@ -636,7 +644,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-08-11T11:40:28.654Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-035",
     about: "Otologist focusing on tinnitus and hearing aid fittings",
     address: "456 Hearing Center Blvd",
     endTime: "07:00:00.000",
@@ -653,7 +661,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-12-08T12:45:30.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-036",
     about: "General practitioner with a focus on women's health",
     address: "753 Women's Health Blvd",
     endTime: "07:00:00.000",
@@ -670,7 +678,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-06-26T14:35:25.678Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-037",
     about: "Experienced dentist specializing in cosmetic dentistry",
     address: "159 Smile Design Blvd",
     endTime: "07:00:00.000",
@@ -687,7 +695,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-16T14:40:32.765Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-038",
     about: "Cardiologist with expertise in cardiac rehabilitation",
     address: "753 Heart Wellness Center",
     endTime: "07:00:00.000",
@@ -704,7 +712,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-09-21T17:25:38.987Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-039",
     about: "Orthopedic specialist with a focus on sports injuries",
     address: "963 Sports Medicine Blvd",
     endTime: "08:00:00.000",
@@ -721,7 +729,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-16T13:30:28.543Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-040",
     about: "Neurologist with expertise in headache and migraine management",
     address: "852 Neurology Center",
     endTime: "07:00:00.000",
@@ -738,7 +746,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-08-21T10:20:25.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-041",
     about: "Otologist specializing in ear infections and chronic ear diseases",
     address: "741 Ear Health Lane",
     endTime: "07:00:00.000",
@@ -755,7 +763,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-12-21T15:10:30.654Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-042",
     about:
       "General practitioner focusing on preventive healthcare for families",
     address: "852 Family Health Blvd",
@@ -773,7 +781,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-07-01T11:20:28.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-043",
     about: "Experienced dentist with a focus on pediatric dental care",
     address: "159 Child Smile Blvd",
     endTime: "07:00:00.000",
@@ -790,7 +798,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-26T14:40:32.876Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-044",
     about:
       "Cardiologist specializing in advanced heart failure and transplantation",
     address: "456 Heart Failure Clinic",
@@ -808,7 +816,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-09-26T14:30:28.543Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-045",
     about: "Orthopedic surgeon with a focus on hand and wrist injuries",
     address: "963 Hand Care Blvd",
     endTime: "08:00:00.000",
@@ -825,7 +833,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-12-01T12:20:25.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-046",
     about: "Neurologist focusing on epilepsy and seizure disorders",
     address: "852 Seizure Care Blvd",
     endTime: "07:00:00.000",
@@ -842,7 +850,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-08-31T10:20:28.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-047",
     about:
       "Otologist with expertise in balance disorders and vestibular rehabilitation",
     address: "741 Balance Health Blvd",
@@ -860,7 +868,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-12-16T14:10:30.876Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-048",
     about: "General practitioner specializing in travel medicine",
     address: "852 Travel Health Blvd",
     endTime: "07:00:00.000",
@@ -877,7 +885,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-06-21T11:50:25.432Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-049",
     about: "Dentist with a focus on endodontics and root canal therapy",
     address: "159 EndoCare Blvd",
     endTime: "07:00:00.000",
@@ -894,7 +902,7 @@ export const DoctorsData: IDoctorData[] = [
     updatedAt: new Date("2023-11-23T12:45:30.987Z"),
   },
   {
-    id: uuid(),
+    id: "doctor-050",
     about: "Cardiologist specializing in cardiac electrophysiology",
     address: "456 Heart Rhythm Blvd",
     endTime: "07:00:00.000",

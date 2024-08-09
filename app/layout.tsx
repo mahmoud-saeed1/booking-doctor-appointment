@@ -1,27 +1,31 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Inter } from "next/font/google";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import "./globals.css";
+import { MenuFavoriteProvider } from "./_context/MenuFavoriteContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Doctor Appointments",
-  description: "Easily book appointments with our top doctors and specialists. Choose your preferred date, time, and doctor, and confirm your booking instantly. Convenient, fast, and secure online appointment scheduling.",
-};
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
+      <meta
+        name="description"
+        content="Atsha strives to present you with an unforgettable  experience that satisfies your plate with delicious cuisines and good vibes only."
+      ></meta>
+      <title>Booking-Appointment</title>
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <MenuFavoriteProvider>
+          <Header />
+          {children}
+          <Footer />
+        </MenuFavoriteProvider>
       </body>
     </html>
   );

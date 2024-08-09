@@ -22,7 +22,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
 }) => {
   return (
     <motion.div
-      className="empty-state flex flex-col items-center justify-center space-y-6 text-center py-16 px-4 bg-white rounded-lg shadow-lg"
+      className="empty-state flex flex-col items-center justify-center space-y-6 text-center py-16 px-4 bg-white rounded-lg"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -38,7 +38,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="h-20 w-20 text-blue-500"
+          className="h-20 w-20 text-primary"
         >
           <path
             fillRule="evenodd"
@@ -60,7 +60,12 @@ const EmptyState: React.FC<EmptyStateProps> = ({
           {buttonLabel}
         </Button>
       ) : useLinks ? (
-        <a href={href} className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-xl font-bold tracking-wider hover:bg-blue-700 transition-all ease-in-out duration-300 shadow-md">{buttonLabel}</a>
+        <a
+          href={href}
+          className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-xl font-bold tracking-wider hover:bg-blue-700 transition-all ease-in-out duration-300 shadow-md"
+        >
+          {buttonLabel}
+        </a>
       ) : (
         <Link
           href={path}
