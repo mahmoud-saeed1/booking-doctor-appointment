@@ -1,7 +1,7 @@
 "use client";
-import { FC, useCallback } from "react";
 import { useMenuFavoriteContext } from "@/app/_context/MenuFavoriteContext";
 import { LockedHeard, OpenedHeart } from "@/app/_icons";
+import { FC, useCallback } from "react";
 import IconContainer from "../IconContainer";
 
 interface FavoriteButtonProps {
@@ -21,7 +21,8 @@ const FavoriteButton: FC<FavoriteButtonProps> = ({ className, doctorId }) => {
   }, [addToFavoriteCart, doctorId]);
 
   return (
-    <span
+    <button
+      type="button"
       aria-label={
         favoriteItemsQuantity > 0 ? "Remove from favorites" : "Add to favorites"
       }
@@ -31,7 +32,7 @@ const FavoriteButton: FC<FavoriteButtonProps> = ({ className, doctorId }) => {
       <IconContainer className="w-10 h-10">
         {favoriteItemsQuantity > 0 ? <LockedHeard /> : <OpenedHeart />}
       </IconContainer>
-    </span>
+    </button>
   );
 };
 
