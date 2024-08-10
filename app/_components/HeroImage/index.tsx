@@ -1,7 +1,7 @@
+import { imageVariants } from "@/app/_animation";
+import { IHeroImageProps } from "@/app/_interfaces";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { IHeroImageProps } from "@/app/_interfaces";
-import { imageVariants } from "@/app/_animation";
 import "./index.css";
 
 const HeroImage: React.FC<IHeroImageProps> = ({ imageSrc, altText }) => (
@@ -15,8 +15,8 @@ const HeroImage: React.FC<IHeroImageProps> = ({ imageSrc, altText }) => (
     <Image
       src={imageSrc}
       alt={altText}
-      layout="fill"
-      objectFit="cover"
+      fill
+      style={{ objectFit: "cover" }}
       priority
     />
   </motion.div>
