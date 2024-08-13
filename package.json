@@ -10,6 +10,7 @@
     "build:sitemap": "next-sitemap"
   },
   "dependencies": {
+    "@iconify/react": "^5.0.2",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
