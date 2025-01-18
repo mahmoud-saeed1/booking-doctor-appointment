@@ -114,7 +114,7 @@ const AppointmentForm = ({
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-8 bg-white shadow-lg rounded-lg flex flex-col space-y-4"
+      className="p-4 flex flex-col space-y-4 overflow-x-hidden overflow-y-scroll lg:scrollbar-thin"
     >
       <FormField
         id="name"

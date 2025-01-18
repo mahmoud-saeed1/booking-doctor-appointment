@@ -38,10 +38,10 @@ const AppointmentDialog = ({
         style={{ borderRadius: ".8rem" }}
       >
         <DialogHeader className="mt-10">
-          <DialogTitle className="text-primary font-bold tracking-wider text-3xl whitespace-nowrap">
+          <DialogTitle className="text-primary font-bold tracking-wider text-2xl lg:text-3xl">
             Book an Appointment
           </DialogTitle>
-          <DialogDescription className="text-gray-500 font-semibold tracking-wide">
+          <DialogDescription className="text-gray-500 text-sm">
             Please fill out the form below to book an appointment.
           </DialogDescription>
         </DialogHeader>

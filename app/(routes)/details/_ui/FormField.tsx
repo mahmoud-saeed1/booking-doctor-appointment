@@ -12,7 +12,7 @@ const FormField: React.FC<FormFieldProps> = ({
   error,
 }) => (
   <div className="mb-4">
-    <label htmlFor={id} className="block text-lg font-medium">
+    <label htmlFor={id} className="block text-[1rem] lg:text-lg font-medium">
       {label}
     </label>
     <input
