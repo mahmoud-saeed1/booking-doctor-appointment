@@ -1,4 +1,8 @@
 import { IIcon } from "../_interfaces";
+import { Icon } from "@iconify/react";
+
+export const LockedHeart = () => <Icon icon="ic:outline-favorite" style={{ fontSize: '32px', color: '#1d4ed8' }} />;
+export const OpenHeart = () => <Icon icon="carbon:favorite" style={{ fontSize: '32px', color: '#1C274C' }} />;
 
 export const LockedHeard: React.FC<IIcon> = ({ className = "", ...rest }) => (
   <svg
